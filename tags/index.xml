@@ -6,9 +6,109 @@
     <description>Recent content in Tags on OrangeC的微博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Tue, 17 Sep 2019 02:18:19 +0800</lastBuildDate>
     
 	<atom:link href="/./tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>JAVA</title>
+      <link>/./tags/java/</link>
+      <pubDate>Tue, 17 Sep 2019 02:18:19 +0800</pubDate>
+      
+      <guid>/./tags/java/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JDK</title>
+      <link>/./tags/jdk/</link>
+      <pubDate>Tue, 17 Sep 2019 02:18:19 +0800</pubDate>
+      
+      <guid>/./tags/jdk/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JRE</title>
+      <link>/./tags/jre/</link>
+      <pubDate>Tue, 17 Sep 2019 02:18:19 +0800</pubDate>
+      
+      <guid>/./tags/jre/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JVM</title>
+      <link>/./tags/jvm/</link>
+      <pubDate>Tue, 17 Sep 2019 02:18:19 +0800</pubDate>
+      
+      <guid>/./tags/jvm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>基础学习</title>
+      <link>/./tags/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Tue, 17 Sep 2019 02:18:19 +0800</pubDate>
+      
+      <guid>/./tags/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>/./tags/linux/</link>
+      <pubDate>Tue, 17 Sep 2019 02:17:32 +0800</pubDate>
+      
+      <guid>/./tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>http协议</title>
+      <link>/./tags/http%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Tue, 17 Sep 2019 02:16:23 +0800</pubDate>
+      
+      <guid>/./tags/http%E5%8D%8F%E8%AE%AE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TCP/IP协议</title>
+      <link>/./tags/tcp/ip%E5%8D%8F%E8%AE%AE/</link>
+      <pubDate>Tue, 17 Sep 2019 02:16:23 +0800</pubDate>
+      
+      <guid>/./tags/tcp/ip%E5%8D%8F%E8%AE%AE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>三次握手</title>
+      <link>/./tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/</link>
+      <pubDate>Tue, 17 Sep 2019 02:16:23 +0800</pubDate>
+      
+      <guid>/./tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>/./tags/git/</link>
+      <pubDate>Tue, 17 Sep 2019 02:15:22 +0800</pubDate>
+      
+      <guid>/./tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Github</title>
+      <link>/./tags/github/</link>
+      <pubDate>Tue, 17 Sep 2019 02:15:22 +0800</pubDate>
+      
+      <guid>/./tags/github/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

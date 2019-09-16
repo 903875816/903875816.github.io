@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OrangeC的微博</title>
-    <link>/./</link>
-    <description>Recent content on OrangeC的微博</description>
+    <title>基础学习 on OrangeC的微博</title>
+    <link>/./tags/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 基础学习 on OrangeC的微博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Sep 2019 02:18:19 +0800</lastBuildDate>
     
-	<atom:link href="/./index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/./tags/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
