@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.58.2 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="OrangeC">
+<meta name="keywords" content="linux">
+<meta name="description" content="Linux的基础命令简介">
+
+
+<meta property="og:description" content="Linux的基础命令简介">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux基础命令">
+<meta name="twitter:title" content="linux基础命令">
+<meta property="og:url" content="/./linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/">
+<meta property="twitter:url" content="/./linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/">
+<meta property="og:site_name" content="OrangeC的微博">
+<meta property="og:description" content="Linux的基础命令简介">
+<meta name="twitter:description" content="Linux的基础命令简介">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2019-09-17T02:17:32">
+  
+  
+    <meta property="article:modified_time" content="2019-09-17T02:17:32">
+  
+  
+  
+    
+      <meta property="article:section" content="Linux">
+    
+  
+  
+    
+      <meta property="article:tag" content="Linux">
+    
+      <meta property="article:tag" content="基础学习">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="/static/images/person/person.jpg">
+  <meta property="twitter:image" content="/static/images/person/person.jpg">
+
+
+    <title>linux基础命令</title>
+
+    <link rel="icon" href="/./favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="/././linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="/./css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="/./">OrangeC的微博</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="/./#about">
+    
+    
+    
+      
+        <img class="header-picture" src="/./static/images/person/person.jpg" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="/./#about">
+          <img class="sidebar-profile-picture" src="/./static/images/person/person.jpg" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">OrangeC</h4>
+        
+          <h5 class="sidebar-profile-bio">なんでもないや</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/./">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/./categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/./tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/./archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/./#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/903875816" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="/./index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      linux基础命令
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-09-17T02:17:32&#43;08:00">
+        
+  九月 17, 2019
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="/./categories/linux">Linux</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              
+
+<h1 id="linux基础命令和-explainshell-com介绍">linux基础命令和 explainshell.com介绍</h1>
+
+<h2 id="linux基础命令">linux基础命令</h2>
+
+<h3 id="磁盘管理">磁盘管理</h3>
+
+<ul>
+<li><p><strong>ls命令</strong></p>
+
+<p>用于显示指定工作目录下之内容（列出目前工作目录所含之文件及子目录)</p>
+
+<p><strong>语法</strong>：</p>
+
+<p>ls [-alrtAFR] [name&hellip;]&rsquo;</p>
+
+<p><strong>参数</strong>：</p>
+
+<ul>
+<li><p>-a 显示所有文件及目录 (ls内定将文件名或目录名称开头为&rdquo;.&ldquo;的视为隐藏档，不会列出)</p></li>
+
+<li><p>-l 除文件名称外，亦将文件型态、权限、拥有者、文件大小等资讯详细列出</p></li>
+
+<li><p>-r 将文件以相反次序显示(原定依英文字母次序)</p></li>
+
+<li><p>-t 将文件依建立时间之先后次序列出</p></li>
+
+<li><p>-A 同 -a ，但不列出 &ldquo;.&rdquo; (目前目录) 及 &ldquo;..&rdquo; (父目录)</p></li>
+
+<li><p>-F 在列出的文件名称后加一符号；</p></li>
+
+<li><p>-R 若目录下有文件，则以下之文件亦皆依序列出</p></li>
+</ul></li>
+</ul>
+
+<h3 id="文件管理">文件管理</h3>
+
+<ul>
+<li><p><strong>cat命令</strong></p>
+
+<p>cat 命令用于连接文件并打印到标准输出设备上</p>
+
+<p><strong>语法</strong>：</p>
+
+<p>&lsquo;cat [-AbeEnstTuv] [&ndash;help] [&ndash;version] fileName&rsquo;</p>
+
+<p><strong>参数</strong>:</p>
+
+<ul>
+<li><p>-n 或 &ndash;number：由 1 开始对所有输出的行数编号。</p></li>
+
+<li><p>-b 或 &ndash;number-nonblank：和 -n 相似，只不过对于空白行不编号。</p></li>
+
+<li><p>-s 或 &ndash;squeeze-blank：当遇到有连续两行以上的空白行，就代换为一行的空白行。</p></li>
+
+<li><p>-v 或 &ndash;show-nonprinting：使用 ^ 和 M- 符号，除了 LFD 和 TAB 之外。</p></li>
+
+<li><p>-E 或 &ndash;show-ends : 在每行结束处显示 $。</p></li>
+
+<li><p>-T 或 &ndash;show-tabs: 将 TAB 字符显示为 ^I。</p></li>
+
+<li><p>-A, &ndash;show-all：等价于 -vET。</p></li>
+
+<li><p>-e：等价于&rdquo;-vE&rdquo;选项；</p></li>
+
+<li><p>-t：等价于&rdquo;-vT&rdquo;选项；</p></li>
+</ul></li>
+
+<li><p><strong>mv命令</strong></p>
+
+<p>mv命令用来为文件或目录改名、或将文件或目录移入其它位置</p>
+
+<p><strong>语法</strong>：</p>
+
+<p>\&ldquo;&rsquo;
+mv [options] source dest
+ mv [options] source&hellip; directory
+\&ldquo;&rsquo;</p>
+
+<p><strong>参数</strong>:</p>
+
+<ul>
+<li><p>-i: 若指定目录已有同名文件，则先询问是否覆盖旧文件;</p></li>
+
+<li><p>-f: 在mv操作要覆盖某已有的目标文件时不给任何指示;</p></li>
+</ul></li>
+
+<li><p><strong>touch命令</strong></p>
+
+<p>touch命令用于修改文件或者目录的时间属性，包括存取时间和更改时间。若文件不存在，系统会建立一个新的文件。</p>
+
+<p>ls -l 可以显示档案的时间记录。</p>
+
+<p><strong>语法</strong>：</p>
+
+<p>&lsquo;touch [-acfm][-d&lt;日期时间&gt;][-r&lt;参考文件或目录&gt;] [-t&lt;日期时间&gt;][&ndash;help][&ndash;version][文件或目录…]&rsquo;</p>
+
+<p><strong>参数</strong>:</p>
+
+<ul>
+<li><p>a 改变档案的读取时间记录。</p></li>
+
+<li><p>m 改变档案的修改时间记录。</p></li>
+
+<li><p>c 假如目的档案不存在，不会建立新的档案。与 &ndash;no-create 的效果一样。</p></li>
+
+<li><p>f 不使用，是为了与其他 unix 系统的相容性而保留。</p></li>
+
+<li><p>r 使用参考档的时间记录，与 &ndash;file 的效果一样。</p></li>
+
+<li><p>d 设定时间与日期，可以使用各种不同的格式。</p></li>
+
+<li><p>t 设定档案的时间记录，格式与 date 指令相同。</p></li>
+
+<li><p>&ndash;no-create 不会建立新档案。</p></li>
+
+<li><p>&ndash;help 列出指令格式。</p></li>
+
+<li><p>&ndash;version 列出版本讯息。</p></li>
+</ul></li>
+</ul>
+
+<h2 id="explainshell-com介绍">explainshell.com介绍</h2>
+
+<p><a href="https://explainshell.com/">explainshell.com</a>由Python编写的，帮助你解释命令行的网站。</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20181107180243876.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NoYXRpbGE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
+
+<p>该网站在github上开源，源代码地址参考<a href="https://github.com/idank/explainshell">这里</a></p>
+
+<p><strong>使用方法</strong>：将你需要的执行的命令输入对话框，他会自动判断你的语句对错并给与你提醒@<a href="这里写自定义目录标题">TOC</a></p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="/./tags/linux/">Linux</a>
+
+  <a class="tag tag--primary tag--small" href="/./tags/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/">基础学习</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/./java%E7%AE%80%E4%BB%8B/09/2019/" data-tooltip="Java简介">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/" data-tooltip="HTTP协议基础">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/./linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/./linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/./linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2019 OrangeC. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/./java%E7%AE%80%E4%BB%8B/09/2019/" data-tooltip="Java简介">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/" data-tooltip="HTTP协议基础">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/./linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/./linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/./linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F.%2Flinux%25E5%259F%25BA%25E7%25A1%2580%25E5%2591%25BD%25E4%25BB%25A4%2F09%2F2019%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F.%2Flinux%25E5%259F%25BA%25E7%25A1%2580%25E5%2591%25BD%25E4%25BB%25A4%2F09%2F2019%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F.%2Flinux%25E5%259F%25BA%25E7%25A1%2580%25E5%2591%25BD%25E4%25BB%25A4%2F09%2F2019%2F">
+          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="/./static/images/person/person.jpg" alt="作者的图片" />
+    
+    <h4 id="about-card-name">OrangeC</h4>
+    
+      <div id="about-card-bio">なんでもないや</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Student
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="/./js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = '\/.\/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4\/09\/2019\/';
+          
+            this.page.identifier = '\/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4\/09\/2019\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
