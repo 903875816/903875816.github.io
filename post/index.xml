@@ -2,84 +2,84 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on OrangeC的微博</title>
-    <link>https://example.org/post/</link>
+    <link>/./post/</link>
     <description>Recent content in Posts on OrangeC的微博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Sep 2019 16:05:08 +0800</lastBuildDate>
     
-	<atom:link href="https://example.org/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/./post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>JAVA继承</title>
-      <link>https://example.org/java%E7%BB%A7%E6%89%BF/09/2019/</link>
+      <link>/./java%E7%BB%A7%E6%89%BF/09/2019/</link>
       <pubDate>Tue, 24 Sep 2019 16:05:08 +0800</pubDate>
       
-      <guid>https://example.org/java%E7%BB%A7%E6%89%BF/09/2019/</guid>
+      <guid>/./java%E7%BB%A7%E6%89%BF/09/2019/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blog网站收藏</title>
-      <link>https://example.org/blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/09/2019/</link>
+      <link>/./blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/09/2019/</link>
       <pubDate>Wed, 18 Sep 2019 00:23:05 +0800</pubDate>
       
-      <guid>https://example.org/blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/09/2019/</guid>
+      <guid>/./blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/09/2019/</guid>
       <description>收藏大杂烩</description>
     </item>
     
     <item>
       <title>Java数组</title>
-      <link>https://example.org/java%E6%95%B0%E7%BB%84/09/2019/</link>
+      <link>/./java%E6%95%B0%E7%BB%84/09/2019/</link>
       <pubDate>Tue, 17 Sep 2019 21:36:30 +0800</pubDate>
       
-      <guid>https://example.org/java%E6%95%B0%E7%BB%84/09/2019/</guid>
+      <guid>/./java%E6%95%B0%E7%BB%84/09/2019/</guid>
       <description>Java一维数组和二维数组及其基本用法简介。</description>
     </item>
     
     <item>
       <title>Java简介</title>
-      <link>https://example.org/java%E7%AE%80%E4%BB%8B/09/2019/</link>
+      <link>/./java%E7%AE%80%E4%BB%8B/09/2019/</link>
       <pubDate>Tue, 17 Sep 2019 02:18:19 +0800</pubDate>
       
-      <guid>https://example.org/java%E7%AE%80%E4%BB%8B/09/2019/</guid>
+      <guid>/./java%E7%AE%80%E4%BB%8B/09/2019/</guid>
       <description>Java基础说明，Java开发环境、编译环境的介绍、执行原理等。</description>
     </item>
     
     <item>
       <title>linux基础命令</title>
-      <link>https://example.org/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</link>
+      <link>/./linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</link>
       <pubDate>Tue, 17 Sep 2019 02:17:32 +0800</pubDate>
       
-      <guid>https://example.org/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</guid>
+      <guid>/./linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</guid>
       <description>Linux的基础命令简介</description>
     </item>
     
     <item>
       <title>HTTP协议基础</title>
-      <link>https://example.org/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/</link>
+      <link>/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/</link>
       <pubDate>Tue, 17 Sep 2019 02:16:23 +0800</pubDate>
       
-      <guid>https://example.org/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/</guid>
+      <guid>/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/</guid>
       <description>HTTP协议的简介以及服务器与浏览器的交互具体实现形式</description>
     </item>
     
     <item>
       <title>Git基础命令</title>
-      <link>https://example.org/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</link>
+      <link>/./git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</link>
       <pubDate>Tue, 17 Sep 2019 02:15:22 +0800</pubDate>
       
-      <guid>https://example.org/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</guid>
+      <guid>/./git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</guid>
       <description>讲述了git的一些基础的命令以及如何通过git与github和个人电脑进行简单的交互。</description>
     </item>
     
     <item>
       <title>Getting Started with Hugo</title>
-      <link>https://example.org/getting-started-with-hugo/04/2014/</link>
+      <link>/./getting-started-with-hugo/04/2014/</link>
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
-      <guid>https://example.org/getting-started-with-hugo/04/2014/</guid>
+      <guid>/./getting-started-with-hugo/04/2014/</guid>
       <description>Step 1. Install Hugo Go to Hugo releases and download the appropriate version for your OS and architecture.
 Save it somewhere specific as we will be using it in the next step.
 More complete instructions are available at Install Hugo

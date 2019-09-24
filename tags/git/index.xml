@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on OrangeC的微博</title>
-    <link>https://example.org/tags/git/</link>
+    <link>/./tags/git/</link>
     <description>Recent content in Git on OrangeC的微博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Sep 2019 02:15:22 +0800</lastBuildDate>
     
-	<atom:link href="https://example.org/tags/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/./tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git基础命令</title>
-      <link>https://example.org/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</link>
+      <link>/./git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</link>
       <pubDate>Tue, 17 Sep 2019 02:15:22 +0800</pubDate>
       
-      <guid>https://example.org/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</guid>
+      <guid>/./git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</guid>
       <description>讲述了git的一些基础的命令以及如何通过git与github和个人电脑进行简单的交互。</description>
     </item>
     
