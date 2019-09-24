@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>TCP/IP协议 on OrangeC的微博</title>
-    <link>/./tags/tcp/ip%E5%8D%8F%E8%AE%AE/</link>
+    <link>https://example.org/tags/tcp/ip%E5%8D%8F%E8%AE%AE/</link>
     <description>Recent content in TCP/IP协议 on OrangeC的微博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Sep 2019 02:16:23 +0800</lastBuildDate>
     
-	<atom:link href="/./tags/tcp/ip%E5%8D%8F%E8%AE%AE/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.org/tags/tcp/ip%E5%8D%8F%E8%AE%AE/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>HTTP协议基础</title>
-      <link>/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/</link>
+      <link>https://example.org/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/</link>
       <pubDate>Tue, 17 Sep 2019 02:16:23 +0800</pubDate>
       
-      <guid>/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/</guid>
+      <guid>https://example.org/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/</guid>
       <description>HTTP协议的简介以及服务器与浏览器的交互具体实现形式</description>
     </item>
     
