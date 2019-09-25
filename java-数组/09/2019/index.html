@@ -7,42 +7,40 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="generator" content="Hugo 0.58.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="OrangeC">
-<meta name="keywords" content="http协议, http">
-<meta name="description" content="HTTP协议的简介以及服务器与浏览器的交互具体实现形式">
+<meta name="keywords" content="java, 数组">
+<meta name="description" content="Java一维数组和二维数组及其基本用法简介。">
 
 
-<meta property="og:description" content="HTTP协议的简介以及服务器与浏览器的交互具体实现形式">
+<meta property="og:description" content="Java一维数组和二维数组及其基本用法简介。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTP协议基础">
-<meta name="twitter:title" content="HTTP协议基础">
-<meta property="og:url" content="/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/">
-<meta property="twitter:url" content="/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/">
+<meta property="og:title" content="Java 数组">
+<meta name="twitter:title" content="Java 数组">
+<meta property="og:url" content="/./java-%E6%95%B0%E7%BB%84/09/2019/">
+<meta property="twitter:url" content="/./java-%E6%95%B0%E7%BB%84/09/2019/">
 <meta property="og:site_name" content="OrangeC的微博">
-<meta property="og:description" content="HTTP协议的简介以及服务器与浏览器的交互具体实现形式">
-<meta name="twitter:description" content="HTTP协议的简介以及服务器与浏览器的交互具体实现形式">
+<meta property="og:description" content="Java一维数组和二维数组及其基本用法简介。">
+<meta name="twitter:description" content="Java一维数组和二维数组及其基本用法简介。">
 <meta property="og:locale" content="zh-cn">
 
   
-    <meta property="article:published_time" content="2019-09-17T02:16:23">
+    <meta property="article:published_time" content="2019-09-17T21:36:30">
   
   
-    <meta property="article:modified_time" content="2019-09-17T02:16:23">
+    <meta property="article:modified_time" content="2019-09-17T21:36:30">
   
-  
-  
-    
-      <meta property="article:section" content="HTTP">
-    
   
   
     
-      <meta property="article:tag" content="TCP/IP协议">
+      <meta property="article:section" content="Language - JAVA - Foundation">
     
-      <meta property="article:tag" content="http协议">
+  
+  
+    
+      <meta property="article:tag" content="JAVA">
+    
+      <meta property="article:tag" content="数组">
     
       <meta property="article:tag" content="基础学习">
-    
-      <meta property="article:tag" content="三次握手">
     
   
 
@@ -55,8 +53,8 @@
 
 
 
-  <meta property="og:image" content="https://tse4-mm.cn.bing.net/th?id=OIP.bgddWzl5cazJWWwOlMwI4AHaHa&w=180&h=172&c=7&o=5&dpr=1.25&pid=1.7">
-  <meta property="twitter:image" content="https://tse4-mm.cn.bing.net/th?id=OIP.bgddWzl5cazJWWwOlMwI4AHaHa&w=180&h=172&c=7&o=5&dpr=1.25&pid=1.7">
+  <meta property="og:image" content="https://tse4-mm.cn.bing.net/th?id=OIP.Yga-j7R1p4qsO0yVrlFiegAAAA&w=216&h=160&c=7&o=5&dpr=1.25&pid=1.7">
+  <meta property="twitter:image" content="https://tse4-mm.cn.bing.net/th?id=OIP.Yga-j7R1p4qsO0yVrlFiegAAAA&w=216&h=160&c=7&o=5&dpr=1.25&pid=1.7">
 
 
 
@@ -66,14 +64,14 @@
   <meta property="twitter:image" content="/static/images/person/person.jpg">
 
 
-    <title>HTTP协议基础</title>
+    <title>Java 数组</title>
 
     <link rel="icon" href="/./favicon.png">
     
 
     
 
-    <link rel="canonical" href="/././http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/">
+    <link rel="canonical" href="/././java-%E6%95%B0%E7%BB%84/09/2019/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -233,13 +231,13 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      HTTP协议基础
+      Java 数组
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2019-09-17T02:16:23&#43;08:00">
+      <time itemprop="datePublished" datetime="2019-09-17T21:36:30&#43;08:00">
         
   九月 17, 2019
 
@@ -250,7 +248,7 @@
   
     <span>发布在</span>
     
-      <a class="category-link" href="/./categories/http">HTTP</a>
+      <a class="category-link" href="/./categories/language-java-foundation">Language - JAVA - Foundation</a>
     
   
 
@@ -262,174 +260,126 @@
             <div class="main-content-wrap">
               
 
-<h1 id="http协议入门以及curl介绍">HTTP协议入门以及curl介绍</h1>
-
-<h2 id="http介绍">HTTP介绍</h2>
+<h2 id="一维数组">一维数组</h2>
 
 <blockquote>
-<p>超文本传输协议（HTTP:<strong>The Hypertext Transfer Protocol</strong>）是一种应用协议用于分布式，协作，超媒体的信息系统。HTTP是万维网数据通信的基础，其中超文本文档包括用户可以轻松访问的其他资源的超链接，例如通过鼠标点击或点击屏幕。开发HTTP是为了促进超文本和万维网<a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">(来自维基百科)</a>。</p>
-
-<h2 id="http的作用">HTTP的作用</h2>
+<p>数组是一种数据结构用来储存同一类型值的类型的集合，通过a[i]可以返问数组中为i的整数</p>
 </blockquote>
 
-<p><strong>HTTP 的作用就是指导浏览器和服务器如何进行沟通</strong></p>
+<hr />
 
-<p>服务器与浏览器的交互：</p>
-
-<p><img src="https://img-blog.csdnimg.cn/2018110917090836.jpg" alt="服务器与浏览器的交互" /></p>
-
-<p><strong>交互的步骤：</strong></p>
-
-<p><strong>1. 浏览器发出请求</strong></p>
-
-<p><strong>2. 通过TCP/IP协议，浏览器和客户端三次握手(80端口）</strong></p>
-
-<p><strong>3. 服务器对请求做出回应</strong></p>
-
-<h2 id="http的请求">HTTP的请求</h2>
-
-<blockquote>
-<p>HTTP的请求指要对所识别的资源执行的期望动作，资源对应于驻留在服务器上的文件或可执行文件的输出。HTTP / 1.0规范定义了GET，POST和HEAD方法，HTTP / 1.1规范添加了五种新方法：OPTIONS，PUT，DELETE，TRACE和CONNECT。通过在这些文档中指定，它们的语义是众所周知的并且可以依赖。任何客户端都可以使用任何方法，并且可以将服务器配置为支持任何方法组合。</p>
-</blockquote>
-
-<h3 id="如何查看http的请求">如何查看HTTP的请求</h3>
+<h3 id="一维数组基础知识">一维数组基础知识</h3>
 
 <ol>
-<li>使用Chrome浏览器输入网址（本例<a href="https://www.bilibili.com/">哔哩哔哩</a>)</li>
-<li>按下F12进入开发者模式，F5刷新<img src="https://img-blog.csdnimg.cn/20181109174349667.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NoYXRpbGE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></li>
-<li>点击开头 www.bilibili.com，再点击heardes-&gt;request heardes-&gt;view source,即可得到HTTP请求。如下：
-<img src="https://img-blog.csdnimg.cn/20181109174930864.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NoYXRpbGE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></li>
+<li>创建数组
+</br> <code>int[] a = new int[]；int[] xx = {a1,a2,a3}</code></li>
+<li>赋值方法
+</br> <code>a[i]=i</code></li>
+<li>初始化
+
+<ul>
+<li>数字数组 所有的元素都初始化为0</li>
+<li>boolean数组 数组的初始化为false</li>
+<li>对象数组 null</li>
+</ul></li>
+<li>数组的长度
+</br><code>arrays.length</code></li>
+<li>命令行参数
+
+<ul>
+<li>其实<code>public static void main(String[] args){}</code>就是一个只接受String类型的数组。</li>
+</ul></li>
 </ol>
 
-<h3 id="http请求的格式">HTTP请求的格式</h3>
+<hr />
 
-<pre><code>GET / HTTP/1.1 
-Host: www.bilibili.com
-Connection: keep-alive
-Cache-Control: max-age=0
-Upgrade-Insecure-Requests: 1
-User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) 
-Accept-Encoding: gzip, deflate, br
-Accept-Language: zh-CN,zh;q=0.9,en;q=0.8
-
-</code></pre>
-
-<ul>
-<li><strong>第一部分</strong>
-第1行，格式一般为**动词 + 路径 + 协议版本 **</li>
-<li><strong>第二部分</strong>
-<em>2-8行</em>
+<h3 id="一维数组的基本使用">一维数组的基本使用</h3>
 
 <ol>
-<li>第2行，HOST用来<strong>指定服务器的域名</strong>，可以将请求发往同一台服务器上的不同网站，为虚拟主机的兴起打下了基础</li>
-<li>第3行表示<strong>持久连接</strong>（persistent connection）是HTTP/1.1 版引入了持久连接（persistent connection），即TCP连接默认不关闭，可以被多个请求复用，不用声明</li>
-<li>第6行代表的客户端所使用的浏览器</li>
-<li>第7行为<strong>Content-Encoding 字段</strong>说明浏览器可以接受哪些压缩方法</li>
-<li>第8行，<strong>默认语言属性</strong>，浏览器告诉服务器其支持什么语言</li>
-</ol></li>
-
-<li><p><strong>第三部分</strong>
-第9行，空格</p>
-
-<h4 id="http请求常用动词及作用">HTTP请求常用动词及作用</h4></li>
-
-<li><p><strong>GET</strong>
-请求指定资源的表示。使用GET的请求应该只检索数据，不应该有其他影响。可以理解为只读取。</p></li>
-
-<li><p><strong>POST</strong>
-请求服务器接受被附在请求作为新下属的实体网络资源由URI标识。例如 将Web表单提交给数据处理过程的结果数据块; 或要添加到数据库的项目。也就是向服务器提交数据，常见的提交表单都是POST方法。</p></li>
-
-<li><p><strong>PUT</strong><br />
-请求将所包含的实体存储在提供的URI下。如果URI引用已存在的资源，则将其修改; 如果URI未指向现有资源，则服务器可以使用该URI创建资源。</p></li>
-
-<li><p><strong>HEAD</strong>
-只请求页面的首部,但没有响应主体。这对于检索在响应头中编写的元信息非常有用，而无需传输整个内容。</p></li>
-</ul>
-
-<h2 id="http的响应">HTTP的响应</h2>
-
-<h3 id="如何查看http的响应">如何查看HTTP的响应</h3>
-
-<p>步骤如请求，第3步为heardes-&gt;response heardes-&gt;view source，如图：
-<img src="https://img-blog.csdnimg.cn/20181109182745136.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NoYXRpbGE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-
-<h3 id="http响应的格式">HTTP响应的格式</h3>
-
-<pre><code>HTTP/1.1 200 OK
-Content-Type: text/html; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Origin,Accept-Encoding
-Content-Encoding: gzip
-
-</code></pre>
+<li>遍历所有的元素
 
 <ul>
-<li><strong>同样分为三部分</strong></li>
-<li><strong>第一部分</strong>
-第1行，格式一般<strong>协议版本 + 状态码（status code） + 状态描述</strong></li>
-<li><strong>第二部分</strong>
-
-<ol>
-<li>第2行，为字符的编码，1.0版规定，头信息必须是 ASCII 码，后面的数据可以是任何格式。因此，<strong>服务器回应的时候，必须告诉客户端，数据是什么格式</strong>，这就是Content-Type字段的作用</li>
-<li>第6行，由于发送的数据可以是任何格式，因此可以把数据压缩后再发送。Content-Encoding字段说明<strong>数据的压缩方法</strong>。</li>
-</ol></li>
-<li><strong>第三部分</strong>
-第7 行，空格</li>
-</ul>
-
-<h4 id="http状态码-status-code">HTTP状态码（status code）</h4>
-
-<blockquote>
-<p>超文本传输​​协议（HTTP）响应状态代码的列表。状态代码由服务器发出，以响应客户端对服务器的请求。它包括来自IETF Request for Comments（RFC）的代码，其他规范以及在超文本传输​​协议（HTTP）的一些常见应用中使用的一些附加代码。状态代码的第一个数字指定五个标准响应类别之一。所示的消息短语是典型的，但是可以提供任何人类可读的替代方案。除非另有说明，否则状态代码是HTTP / 1.1标准（RFC 7231）的一部分。<a href="https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">(来自维基百科)</a>
-- 1xx（信息）：收到请求，继续处理
-- 2xx（成功）：请求已成功接收，理解和接受
-- 3xx（重定向）：需要采取进一步措施才能完成请求
-- 4xx（客户端错误）：请求包含错误的语法或无法满足
-- 5xx（服务器错误）：服务器无法满足明显有效的请求</p>
-</blockquote>
-
-<h2 id="curl介绍">CURL介绍</h2>
-
-<blockquote>
-<p>一个计算机软件项目，提供了一个库和命令行工具，用于使用各种协议传输数据。cURL项目生成两个产品libcurl和cURL。它于1997年首次发布。该名称代表“客户端URL”。原作者和首席开发人员是瑞典开发人员Daniel Stenberg。</p>
-</blockquote>
-
-<p><strong>用法</strong>（待续）</p>
+<li>for 语句
+</br> <code>for(int i=0;i&lt;a.length;i++)</code></li>
+<li>for each语句
+</br> <code>for(type variable: collection)</code>
 
 <ul>
-<li><p>查看网页源代码以及下载网页</p>
+<li><strong>注意</strong>：collection必须是数组或者Iterable接口</li>
+</ul></li>
+</ul></li>
+<li>所有的元素
 
-<pre><code>$ curl www.baidu.com
-curl -o [xxx] www.baidu.com
+<ul>
+<li>for each语句和for 语句</li>
+<li>Arrays.toString 方法
+
+<ul>
+<li>返回一个包含数组元素的字符串，并用逗号分隔[2,3,4,5,6]</li>
+</ul></li>
+</ul></li>
+<li>数组的排序
+
+<ul>
+<li><code>数组可以使用Arrays.sort方法进行排序，其使用的是快速排序的算法，返回值是一个数组</code></li>
+</ul></li>
+</ol>
+
+<hr />
+
+<h3 id="例子说明">例子说明</h3>
+
+<pre><code>    import java.lang.reflect.Array;
+    import java.util.Arrays;
+
+    public class array {
+        public static void main(String[] args) {
+        int[] a={1,22,5,4,7,32,12,76,31,53};
+        System.out.println(a);//数组是不能直接打印的
+
+
+        //想要打印每个元素要用下列方法：
+        // for each打印所有的数组
+        for (int element:a){
+            System.out.print(element+&quot;\t&quot;);
+        }
+        //toString打印所有的数组
+        System.out.println(&quot;\n&quot; + Arrays.toString(a));//已经变成字符串可以打印
+        //数组排序方法
+        Arrays.sort(a);//最后还是返回给了int[] a,所以不能使用 System.out.println打印
+        System.out.println(Arrays.toString(a));//打印排好序的数组
+
+
+        //创建一个小的子集
+        int[] b = Arrays.copyOf(a,4);//返回的是一个数组的子集,[a0-a4]
+        System.out.println(Arrays.toString(b));
+        int[] c = Arrays.copyOfRange(a,4,9);//返回的是一个数组的子集,[a5-a10]
+        System.out.println(Arrays.toString(c));
+
+        //用二分法查找一个数，并返回这个数的下标
+        System.out.println(Arrays.binarySearch(a,7));
+
+        //如果两个数组大小相同，下标元素也相等的话，返回true
+        int[] d=a;
+        System.out.println(Arrays.equals(a,d));
+
+    }
+}
+
+    结果如下：(console)
+    [I@4554617c
+    1   22  5   4   7   32  12  76  31  53  
+    [1, 22, 5, 4, 7, 32, 12, 76, 31, 53]
+    [1, 4, 5, 7, 12, 22, 31, 32, 53, 76]
+    [1, 4, 5, 7]
+    [12, 22, 31, 32, 53]
+    3
+true
 </code></pre>
 
-<p><img src="https://img-blog.csdnimg.cn/20181109191344325.png" alt="在这里插入图片描述" /></p></li>
+<h2 id="二维数组">二维数组</h2>
 
-<li><p>使用-X GET得到GET请求</p>
-
-<pre><code>$ curl -X  GET www.baidu.com
-</code></pre>
-
-<p><img src="https://img-blog.csdnimg.cn/20181109190415743.png" alt="在这里插入图片描述" /></p></li>
-
-<li><p>使用-i 同时获得HTTP头和文件内容</p>
-
-<pre><code>curl -i www.bilibili.com
-</code></pre>
-
-<p><img src="https://img-blog.csdnimg.cn/20181109191037938.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NoYXRpbGE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p></li>
-
-<li><p>用 -L对网址重定向</p>
-
-<pre><code>curl -L www.baidu.com
-</code></pre></li>
-
-<li><p>用 -d 发送 POST 请求</p>
-
-<pre><code> curl -d [xxx] www.baidu.com
-</code></pre></li>
-</ul>
+<p><strong><em>未完待续</em></strong></p>
 
               
             </div>
@@ -442,13 +392,11 @@ curl -o [xxx] www.baidu.com
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">标签</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="/./tags/tcp/ip%E5%8D%8F%E8%AE%AE/">TCP/IP协议</a>
+  <a class="tag tag--primary tag--small" href="/./tags/java/">JAVA</a>
 
-  <a class="tag tag--primary tag--small" href="/./tags/http%E5%8D%8F%E8%AE%AE/">http协议</a>
+  <a class="tag tag--primary tag--small" href="/./tags/%E6%95%B0%E7%BB%84/">数组</a>
 
   <a class="tag tag--primary tag--small" href="/./tags/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/">基础学习</a>
-
-  <a class="tag tag--primary tag--small" href="/./tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/">三次握手</a>
 
                   </div>
                 
@@ -461,7 +409,7 @@ curl -o [xxx] www.baidu.com
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/./linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/" data-tooltip="linux基础命令">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/./blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/09/2019/" data-tooltip="Blog网站收藏">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -469,7 +417,7 @@ curl -o [xxx] www.baidu.com
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/./git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/" data-tooltip="Git基础命令">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/./java-%E7%AE%80%E4%BB%8B/09/2019/" data-tooltip="Java 简介">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -487,19 +435,19 @@ curl -o [xxx] www.baidu.com
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/./java-%E6%95%B0%E7%BB%84/09/2019/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/./java-%E6%95%B0%E7%BB%84/09/2019/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/./java-%E6%95%B0%E7%BB%84/09/2019/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -547,7 +495,7 @@ curl -o [xxx] www.baidu.com
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/./linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/" data-tooltip="linux基础命令">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/./blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/09/2019/" data-tooltip="Blog网站收藏">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -555,7 +503,7 @@ curl -o [xxx] www.baidu.com
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="/./git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/" data-tooltip="Git基础命令">
+                <a class="post-action-btn btn btn--default tooltip--top" href="/./java-%E7%AE%80%E4%BB%8B/09/2019/" data-tooltip="Java 简介">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -573,19 +521,19 @@ curl -o [xxx] www.baidu.com
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=/./java-%E6%95%B0%E7%BB%84/09/2019/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=/./java-%E6%95%B0%E7%BB%84/09/2019/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=/./java-%E6%95%B0%E7%BB%84/09/2019/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -615,19 +563,19 @@ curl -o [xxx] www.baidu.com
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F.%2Fhttp%25E5%258D%258F%25E8%25AE%25AE%25E5%259F%25BA%25E7%25A1%2580%2F09%2F2019%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=%2F.%2Fjava-%25E6%2595%25B0%25E7%25BB%2584%2F09%2F2019%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F.%2Fhttp%25E5%258D%258F%25E8%25AE%25AE%25E5%259F%25BA%25E7%25A1%2580%2F09%2F2019%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=%2F.%2Fjava-%25E6%2595%25B0%25E7%25BB%2584%2F09%2F2019%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F.%2Fhttp%25E5%258D%258F%25E8%25AE%25AE%25E5%259F%25BA%25E7%25A1%2580%2F09%2F2019%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=%2F.%2Fjava-%25E6%2595%25B0%25E7%25BB%2584%2F09%2F2019%2F">
           <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
         </a>
       </li>
@@ -719,9 +667,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = '\/.\/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80\/09\/2019\/';
+          this.page.url = '\/.\/java-%E6%95%B0%E7%BB%84\/09\/2019\/';
           
-            this.page.identifier = '\/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80\/09\/2019\/'
+            this.page.identifier = '\/java-%E6%95%B0%E7%BB%84\/09\/2019\/'
           
         };
         (function() {
