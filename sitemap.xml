@@ -3,237 +3,237 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://example.org/categories/</loc>
+    <loc>/./categories/</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/</loc>
+    <loc>/./</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/post/</loc>
+    <loc>/./post/</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/categories/system/</loc>
+    <loc>/./categories/system/</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/tag1/</loc>
+    <loc>/./tags/tag1/</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/tag2/</loc>
+    <loc>/./tags/tag2/</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/</loc>
+    <loc>/./tags/</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/win%E5%8F%8C%E7%B3%BB%E7%BB%9F/09/2019/</loc>
+    <loc>/./win%E5%8F%8C%E7%B3%BB%E7%BB%9F/09/2019/</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/java/</loc>
+    <loc>/./tags/java/</loc>
     <lastmod>2019-09-26T10:49:41+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/09/2019/</loc>
+    <loc>/./java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/09/2019/</loc>
     <lastmod>2019-09-26T10:49:41+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/%E5%86%85%E9%83%A8%E7%B1%BB/</loc>
+    <loc>/./tags/%E5%86%85%E9%83%A8%E7%B1%BB/</loc>
     <lastmod>2019-09-26T10:49:41+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>/./tags/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-09-26T10:49:41+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/%E6%8E%A5%E5%8F%A3/</loc>
+    <loc>/./tags/%E6%8E%A5%E5%8F%A3/</loc>
     <lastmod>2019-09-26T10:49:41+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/categories/java/</loc>
+    <loc>/./categories/java/</loc>
     <lastmod>2019-09-25T14:24:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/09/2019/</loc>
+    <loc>/./java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/09/2019/</loc>
     <lastmod>2019-09-25T14:24:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/categories/language/</loc>
+    <loc>/./categories/language/</loc>
     <lastmod>2019-09-25T14:24:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</loc>
+    <loc>/./tags/%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2019-09-25T14:24:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/java-%E7%BB%A7%E6%89%BF/09/2019/</loc>
+    <loc>/./java-%E7%BB%A7%E6%89%BF/09/2019/</loc>
     <lastmod>2019-09-24T16:05:08+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/%E7%BB%A7%E6%89%BF/</loc>
+    <loc>/./tags/%E7%BB%A7%E6%89%BF/</loc>
     <lastmod>2019-09-24T16:05:08+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/09/2019/</loc>
+    <loc>/./blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/09/2019/</loc>
     <lastmod>2019-09-18T00:23:05+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/%E5%85%B6%E4%BB%96/</loc>
+    <loc>/./tags/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2019-09-18T00:23:05+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/java-%E6%95%B0%E7%BB%84/09/2019/</loc>
+    <loc>/./java-%E6%95%B0%E7%BB%84/09/2019/</loc>
     <lastmod>2019-09-17T21:36:30+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/%E6%95%B0%E7%BB%84/</loc>
+    <loc>/./tags/%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2019-09-17T21:36:30+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/java-%E7%AE%80%E4%BB%8B/09/2019/</loc>
+    <loc>/./java-%E7%AE%80%E4%BB%8B/09/2019/</loc>
     <lastmod>2019-09-17T02:18:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/jdk/</loc>
+    <loc>/./tags/jdk/</loc>
     <lastmod>2019-09-17T02:18:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/jre/</loc>
+    <loc>/./tags/jre/</loc>
     <lastmod>2019-09-17T02:18:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/jvm/</loc>
+    <loc>/./tags/jvm/</loc>
     <lastmod>2019-09-17T02:18:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/linux/</loc>
+    <loc>/./tags/linux/</loc>
     <lastmod>2019-09-17T02:17:32+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/categories/linux/</loc>
+    <loc>/./categories/linux/</loc>
     <lastmod>2019-09-17T02:17:32+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</loc>
+    <loc>/./linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</loc>
     <lastmod>2019-09-17T02:17:32+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/categories/http/</loc>
+    <loc>/./categories/http/</loc>
     <lastmod>2019-09-17T02:16:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/http%E5%8D%8F%E8%AE%AE/</loc>
+    <loc>/./tags/http%E5%8D%8F%E8%AE%AE/</loc>
     <lastmod>2019-09-17T02:16:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/</loc>
+    <loc>/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/</loc>
     <lastmod>2019-09-17T02:16:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/tcp/ip%E5%8D%8F%E8%AE%AE/</loc>
+    <loc>/./tags/tcp/ip%E5%8D%8F%E8%AE%AE/</loc>
     <lastmod>2019-09-17T02:16:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/</loc>
+    <loc>/./tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/</loc>
     <lastmod>2019-09-17T02:16:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/git/</loc>
+    <loc>/./tags/git/</loc>
     <lastmod>2019-09-17T02:15:22+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/github/</loc>
+    <loc>/./tags/github/</loc>
     <lastmod>2019-09-17T02:15:22+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</loc>
+    <loc>/./git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</loc>
     <lastmod>2019-09-17T02:15:22+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/categories/software-tool-study-git/</loc>
+    <loc>/./categories/software-tool-study-git/</loc>
     <lastmod>2019-09-17T02:15:22+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/categories/development/</loc>
+    <loc>/./categories/development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/development/</loc>
+    <loc>/./tags/development/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/getting-started-with-hugo/04/2014/</loc>
+    <loc>/./getting-started-with-hugo/04/2014/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/go/</loc>
+    <loc>/./tags/go/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/golang/</loc>
+    <loc>/./categories/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/categories/golang/</loc>
+    <loc>/./tags/golang/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/tags/hugo/</loc>
+    <loc>/./tags/hugo/</loc>
     <lastmod>2014-04-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>https://example.org/archives/</loc>
+    <loc>/./archives/</loc>
   </url>
   
 </urlset>

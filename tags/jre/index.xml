@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>JRE on OrangeC的微博</title>
-    <link>https://example.org/tags/jre/</link>
+    <link>/./tags/jre/</link>
     <description>Recent content in JRE on OrangeC的微博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 17 Sep 2019 02:18:19 +0800</lastBuildDate>
     
-	<atom:link href="https://example.org/tags/jre/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/./tags/jre/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Java 简介</title>
-      <link>https://example.org/java-%E7%AE%80%E4%BB%8B/09/2019/</link>
+      <link>/./java-%E7%AE%80%E4%BB%8B/09/2019/</link>
       <pubDate>Tue, 17 Sep 2019 02:18:19 +0800</pubDate>
       
-      <guid>https://example.org/java-%E7%AE%80%E4%BB%8B/09/2019/</guid>
+      <guid>/./java-%E7%AE%80%E4%BB%8B/09/2019/</guid>
       <description>Java基础说明，Java开发环境、编译环境的介绍、执行原理等。</description>
     </item>
     

@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>泛型数组 on OrangeC的微博</title>
-    <link>https://example.org/tags/%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
+    <link>/./tags/%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
     <description>Recent content in 泛型数组 on OrangeC的微博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 25 Sep 2019 14:24:25 +0800</lastBuildDate>
     
-	<atom:link href="https://example.org/tags/%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/./tags/%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Java泛型数组</title>
-      <link>https://example.org/java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/09/2019/</link>
+      <link>/./java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/09/2019/</link>
       <pubDate>Wed, 25 Sep 2019 14:24:25 +0800</pubDate>
       
-      <guid>https://example.org/java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/09/2019/</guid>
+      <guid>/./java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/09/2019/</guid>
       <description></description>
     </item>
     
