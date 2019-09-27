@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>继承 on OrangeC的微博</title>
-    <link>/./tags/%E7%BB%A7%E6%89%BF/</link>
+    <link>https://example.org/tags/%E7%BB%A7%E6%89%BF/</link>
     <description>Recent content in 继承 on OrangeC的微博</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 24 Sep 2019 16:05:08 +0800</lastBuildDate>
     
-	<atom:link href="/./tags/%E7%BB%A7%E6%89%BF/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.org/tags/%E7%BB%A7%E6%89%BF/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Java 继承</title>
-      <link>/./java-%E7%BB%A7%E6%89%BF/09/2019/</link>
+      <link>https://example.org/java-%E7%BB%A7%E6%89%BF/09/2019/</link>
       <pubDate>Tue, 24 Sep 2019 16:05:08 +0800</pubDate>
       
-      <guid>/./java-%E7%BB%A7%E6%89%BF/09/2019/</guid>
+      <guid>https://example.org/java-%E7%BB%A7%E6%89%BF/09/2019/</guid>
       <description></description>
     </item>
     
