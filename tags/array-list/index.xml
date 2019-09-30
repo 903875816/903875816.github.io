@@ -2,30 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Array List on OrangeC的博客</title>
-    <link>https://./tags/array-list/</link>
+    <link>/./tags/array-list/</link>
     <description>Recent content in Array List on OrangeC的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
     <lastBuildDate>Wed, 25 Sep 2019 14:24:25 +0800</lastBuildDate>
     
-	<atom:link href="https://./tags/array-list/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/./tags/array-list/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Java泛型数组</title>
-      <link>https://./blog/2019-09/java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
+      <link>/./blog/2019-09/java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
       <pubDate>Wed, 25 Sep 2019 14:24:25 +0800</pubDate>
       
-      <guid>https://./blog/2019-09/java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</guid>
+      <guid>/./blog/2019-09/java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java泛型数组</title>
-      <link>https://./java/04-java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
+      <link>/./java/04-java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
       <pubDate>Wed, 25 Sep 2019 14:24:25 +0800</pubDate>
       
-      <guid>https://./java/04-java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</guid>
+      <guid>/./java/04-java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</guid>
       <description></description>
     </item>
     

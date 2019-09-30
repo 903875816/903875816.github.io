@@ -2,165 +2,165 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OrangeC的博客</title>
-    <link>https://./</link>
+    <link>/./</link>
     <description>Recent content on OrangeC的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
     <lastBuildDate>Fri, 27 Sep 2019 22:37:06 +0800</lastBuildDate>
     
-	<atom:link href="https://./index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/./index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Win双系统</title>
-      <link>https://./blog/2019-09/win%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
+      <link>/./blog/2019-09/win%E5%8F%8C%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Fri, 27 Sep 2019 22:37:06 +0800</pubDate>
       
-      <guid>https://./blog/2019-09/win%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
+      <guid>/./blog/2019-09/win%E5%8F%8C%E7%B3%BB%E7%BB%9F/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java接口与内部类</title>
-      <link>https://./blog/2019-09/java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/</link>
+      <link>/./blog/2019-09/java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/</link>
       <pubDate>Thu, 26 Sep 2019 10:49:41 +0800</pubDate>
       
-      <guid>https://./blog/2019-09/java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/</guid>
+      <guid>/./blog/2019-09/java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java接口与内部类</title>
-      <link>https://./java/05-java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/</link>
+      <link>/./java/05-java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/</link>
       <pubDate>Thu, 26 Sep 2019 10:49:41 +0800</pubDate>
       
-      <guid>https://./java/05-java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/</guid>
+      <guid>/./java/05-java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java泛型数组</title>
-      <link>https://./blog/2019-09/java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
+      <link>/./blog/2019-09/java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
       <pubDate>Wed, 25 Sep 2019 14:24:25 +0800</pubDate>
       
-      <guid>https://./blog/2019-09/java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</guid>
+      <guid>/./blog/2019-09/java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java泛型数组</title>
-      <link>https://./java/04-java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
+      <link>/./java/04-java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
       <pubDate>Wed, 25 Sep 2019 14:24:25 +0800</pubDate>
       
-      <guid>https://./java/04-java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</guid>
+      <guid>/./java/04-java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java 继承</title>
-      <link>https://./blog/2019-09/java-%E7%BB%A7%E6%89%BF/</link>
+      <link>/./blog/2019-09/java-%E7%BB%A7%E6%89%BF/</link>
       <pubDate>Tue, 24 Sep 2019 16:05:08 +0800</pubDate>
       
-      <guid>https://./blog/2019-09/java-%E7%BB%A7%E6%89%BF/</guid>
+      <guid>/./blog/2019-09/java-%E7%BB%A7%E6%89%BF/</guid>
       <description>&lt;hr /&gt;</description>
     </item>
     
     <item>
       <title>Java 继承</title>
-      <link>https://./java/03-java%E7%BB%A7%E6%89%BF/</link>
+      <link>/./java/03-java%E7%BB%A7%E6%89%BF/</link>
       <pubDate>Tue, 24 Sep 2019 16:05:08 +0800</pubDate>
       
-      <guid>https://./java/03-java%E7%BB%A7%E6%89%BF/</guid>
+      <guid>/./java/03-java%E7%BB%A7%E6%89%BF/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blog网站收藏</title>
-      <link>https://./blog/2019-09/blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/</link>
+      <link>/./blog/2019-09/blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/</link>
       <pubDate>Wed, 18 Sep 2019 00:23:05 +0800</pubDate>
       
-      <guid>https://./blog/2019-09/blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/</guid>
+      <guid>/./blog/2019-09/blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/</guid>
       <description>收藏大杂烩</description>
     </item>
     
     <item>
       <title>Java 数组</title>
-      <link>https://./blog/2019-09/java-%E6%95%B0%E7%BB%84/</link>
+      <link>/./blog/2019-09/java-%E6%95%B0%E7%BB%84/</link>
       <pubDate>Tue, 17 Sep 2019 21:36:30 +0800</pubDate>
       
-      <guid>https://./blog/2019-09/java-%E6%95%B0%E7%BB%84/</guid>
+      <guid>/./blog/2019-09/java-%E6%95%B0%E7%BB%84/</guid>
       <description>Java一维数组和二维数组及其基本用法简介。</description>
     </item>
     
     <item>
       <title>Java 数组</title>
-      <link>https://./java/02-java%E6%95%B0%E7%BB%84/</link>
+      <link>/./java/02-java%E6%95%B0%E7%BB%84/</link>
       <pubDate>Tue, 17 Sep 2019 21:36:30 +0800</pubDate>
       
-      <guid>https://./java/02-java%E6%95%B0%E7%BB%84/</guid>
+      <guid>/./java/02-java%E6%95%B0%E7%BB%84/</guid>
       <description>Java一维数组和二维数组及其基本用法简介。</description>
     </item>
     
     <item>
       <title>Java 简介</title>
-      <link>https://./blog/2019-09/java-%E7%AE%80%E4%BB%8B/</link>
+      <link>/./blog/2019-09/java-%E7%AE%80%E4%BB%8B/</link>
       <pubDate>Tue, 17 Sep 2019 02:18:19 +0800</pubDate>
       
-      <guid>https://./blog/2019-09/java-%E7%AE%80%E4%BB%8B/</guid>
+      <guid>/./blog/2019-09/java-%E7%AE%80%E4%BB%8B/</guid>
       <description>Java基础说明，Java开发环境、编译环境的介绍、执行原理等。</description>
     </item>
     
     <item>
       <title>Java 简介</title>
-      <link>https://./java/01-java%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</link>
+      <link>/./java/01-java%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</link>
       <pubDate>Tue, 17 Sep 2019 02:18:19 +0800</pubDate>
       
-      <guid>https://./java/01-java%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</guid>
+      <guid>/./java/01-java%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</guid>
       <description>Java基础说明，Java开发环境、编译环境的介绍、执行原理等。</description>
     </item>
     
     <item>
       <title>linux基础命令</title>
-      <link>https://./blog/2019-09/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</link>
+      <link>/./blog/2019-09/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Tue, 17 Sep 2019 02:17:32 +0800</pubDate>
       
-      <guid>https://./blog/2019-09/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</guid>
+      <guid>/./blog/2019-09/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</guid>
       <description>Linux的基础命令简介</description>
     </item>
     
     <item>
       <title>HTTP协议基础</title>
-      <link>https://./blog/2019-09/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/</link>
+      <link>/./blog/2019-09/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/</link>
       <pubDate>Tue, 17 Sep 2019 02:16:23 +0800</pubDate>
       
-      <guid>https://./blog/2019-09/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/</guid>
+      <guid>/./blog/2019-09/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/</guid>
       <description>HTTP协议的简介以及服务器与浏览器的交互具体实现形式</description>
     </item>
     
     <item>
       <title>Git基础命令</title>
-      <link>https://./blog/2019-09/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</link>
+      <link>/./blog/2019-09/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</link>
       <pubDate>Tue, 17 Sep 2019 02:15:22 +0800</pubDate>
       
-      <guid>https://./blog/2019-09/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</guid>
+      <guid>/./blog/2019-09/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</guid>
       <description>讲述了git的一些基础的命令以及如何通过git与github和个人电脑进行简单的交互。</description>
     </item>
     
     <item>
       <title>使用Hugo搭建个人博客</title>
-      <link>https://./blog/1-01/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>/./blog/1-01/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://./blog/1-01/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>/./blog/1-01/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>使用Hugo搭建个人博客</title>
-      <link>https://./build/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <link>/./build/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://./build/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <guid>/./build/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
       <description></description>
     </item>
     
