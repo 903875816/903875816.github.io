@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JAVA学习 on OrangeC的博客</title>
+    <link>https://example.com/series/java%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in JAVA学习 on OrangeC的博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zn-Hans</language>
+    <lastBuildDate>Thu, 26 Sep 2019 10:49:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://example.com/series/java%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Java接口与内部类</title>
+      <link>https://example.com/blog/2019-09/java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/</link>
+      <pubDate>Thu, 26 Sep 2019 10:49:41 +0800</pubDate>
+      
+      <guid>https://example.com/blog/2019-09/java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java接口与内部类</title>
+      <link>https://example.com/java/05-java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/</link>
+      <pubDate>Thu, 26 Sep 2019 10:49:41 +0800</pubDate>
+      
+      <guid>https://example.com/java/05-java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java泛型数组</title>
+      <link>https://example.com/blog/2019-09/java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Wed, 25 Sep 2019 14:24:25 +0800</pubDate>
+      
+      <guid>https://example.com/blog/2019-09/java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java泛型数组</title>
+      <link>https://example.com/java/04-java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Wed, 25 Sep 2019 14:24:25 +0800</pubDate>
+      
+      <guid>https://example.com/java/04-java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java 继承</title>
+      <link>https://example.com/blog/2019-09/java-%E7%BB%A7%E6%89%BF/</link>
+      <pubDate>Tue, 24 Sep 2019 16:05:08 +0800</pubDate>
+      
+      <guid>https://example.com/blog/2019-09/java-%E7%BB%A7%E6%89%BF/</guid>
+      <description>&lt;hr /&gt;</description>
+    </item>
+    
+    <item>
+      <title>Java 继承</title>
+      <link>https://example.com/java/03-java%E7%BB%A7%E6%89%BF/</link>
+      <pubDate>Tue, 24 Sep 2019 16:05:08 +0800</pubDate>
+      
+      <guid>https://example.com/java/03-java%E7%BB%A7%E6%89%BF/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java 数组</title>
+      <link>https://example.com/blog/2019-09/java-%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Tue, 17 Sep 2019 21:36:30 +0800</pubDate>
+      
+      <guid>https://example.com/blog/2019-09/java-%E6%95%B0%E7%BB%84/</guid>
+      <description>Java一维数组和二维数组及其基本用法简介。</description>
+    </item>
+    
+    <item>
+      <title>Java 数组</title>
+      <link>https://example.com/java/02-java%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Tue, 17 Sep 2019 21:36:30 +0800</pubDate>
+      
+      <guid>https://example.com/java/02-java%E6%95%B0%E7%BB%84/</guid>
+      <description>Java一维数组和二维数组及其基本用法简介。</description>
+    </item>
+    
+    <item>
+      <title>Java 简介</title>
+      <link>https://example.com/blog/2019-09/java-%E7%AE%80%E4%BB%8B/</link>
+      <pubDate>Tue, 17 Sep 2019 02:18:19 +0800</pubDate>
+      
+      <guid>https://example.com/blog/2019-09/java-%E7%AE%80%E4%BB%8B/</guid>
+      <description>Java基础说明，Java开发环境、编译环境的介绍、执行原理等。</description>
+    </item>
+    
+    <item>
+      <title>Java 简介</title>
+      <link>https://example.com/java/01-java%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Tue, 17 Sep 2019 02:18:19 +0800</pubDate>
+      
+      <guid>https://example.com/java/01-java%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</guid>
+      <description>Java基础说明，Java开发环境、编译环境的介绍、执行原理等。</description>
+    </item>
+    
+  </channel>
+</rss>

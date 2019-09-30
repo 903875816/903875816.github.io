@@ -3,237 +3,267 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/./categories/</loc>
+    <loc>https://example.com/categories/</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./</loc>
+    <loc>https://example.com/series/linux/</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./post/</loc>
+    <loc>https://example.com/</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./categories/system/</loc>
+    <loc>https://example.com/series/</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/tag1/</loc>
+    <loc>https://example.com/tags/</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/tag2/</loc>
+    <loc>https://example.com/tags/ubuntu/</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/</loc>
+    <loc>https://example.com/tags/windows/</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./win%E5%8F%8C%E7%B3%BB%E7%BB%9F/09/2019/</loc>
+    <loc>https://example.com/blog/2019-09/win%E5%8F%8C%E7%B3%BB%E7%BB%9F/</loc>
     <lastmod>2019-09-27T22:37:06+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/java/</loc>
+    <loc>https://example.com/categories/%E5%8F%8C%E7%B3%BB%E7%BB%9F/</loc>
+    <lastmod>2019-09-27T22:37:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/inner-calss/</loc>
     <lastmod>2019-09-26T10:49:41+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/09/2019/</loc>
+    <loc>https://example.com/tags/interface/</loc>
     <lastmod>2019-09-26T10:49:41+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/%E5%86%85%E9%83%A8%E7%B1%BB/</loc>
+    <loc>https://example.com/categories/java/</loc>
     <lastmod>2019-09-26T10:49:41+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/%E5%9F%BA%E7%A1%80%E5%AD%A6%E4%B9%A0/</loc>
+    <loc>https://example.com/series/java%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-09-26T10:49:41+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/%E6%8E%A5%E5%8F%A3/</loc>
+    <loc>https://example.com/blog/2019-09/java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/</loc>
     <lastmod>2019-09-26T10:49:41+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./categories/java/</loc>
+    <loc>https://example.com/java/05-java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/</loc>
+    <lastmod>2019-09-26T10:49:41+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/array-list/</loc>
     <lastmod>2019-09-25T14:24:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/09/2019/</loc>
+    <loc>https://example.com/categories/java%E5%AD%A6%E4%B9%A0/</loc>
     <lastmod>2019-09-25T14:24:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./categories/language/</loc>
+    <loc>https://example.com/blog/2019-09/java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2019-09-25T14:24:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</loc>
+    <loc>https://example.com/java/04-java%E6%B3%9B%E5%9E%8B%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2019-09-25T14:24:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./java-%E7%BB%A7%E6%89%BF/09/2019/</loc>
+    <loc>https://example.com/tags/inherited/</loc>
     <lastmod>2019-09-24T16:05:08+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/%E7%BB%A7%E6%89%BF/</loc>
+    <loc>https://example.com/blog/2019-09/java-%E7%BB%A7%E6%89%BF/</loc>
     <lastmod>2019-09-24T16:05:08+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/09/2019/</loc>
+    <loc>https://example.com/java/03-java%E7%BB%A7%E6%89%BF/</loc>
+    <lastmod>2019-09-24T16:05:08+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/categories/blog%E6%94%B6%E8%97%8F/</loc>
     <lastmod>2019-09-18T00:23:05+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/%E5%85%B6%E4%BB%96/</loc>
+    <loc>https://example.com/blog/2019-09/blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/</loc>
     <lastmod>2019-09-18T00:23:05+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./java-%E6%95%B0%E7%BB%84/09/2019/</loc>
+    <loc>https://example.com/series/%E5%85%B6%E4%BB%96/</loc>
+    <lastmod>2019-09-18T00:23:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/tags/%E5%85%B6%E4%BB%96/</loc>
+    <lastmod>2019-09-18T00:23:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog/2019-09/java-%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2019-09-17T21:36:30+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/%E6%95%B0%E7%BB%84/</loc>
+    <loc>https://example.com/java/02-java%E6%95%B0%E7%BB%84/</loc>
     <lastmod>2019-09-17T21:36:30+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./java-%E7%AE%80%E4%BB%8B/09/2019/</loc>
+    <loc>https://example.com/tags/list/</loc>
+    <lastmod>2019-09-17T21:36:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://example.com/blog/2019-09/java-%E7%AE%80%E4%BB%8B/</loc>
     <lastmod>2019-09-17T02:18:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/jdk/</loc>
+    <loc>https://example.com/java/01-java%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</loc>
     <lastmod>2019-09-17T02:18:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/jre/</loc>
+    <loc>https://example.com/tags/jdk/</loc>
     <lastmod>2019-09-17T02:18:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/jvm/</loc>
+    <loc>https://example.com/tags/jre/</loc>
     <lastmod>2019-09-17T02:18:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/linux/</loc>
+    <loc>https://example.com/categories/linux/</loc>
     <lastmod>2019-09-17T02:17:32+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./categories/linux/</loc>
+    <loc>https://example.com/tags/linux/</loc>
     <lastmod>2019-09-17T02:17:32+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</loc>
+    <loc>https://example.com/blog/2019-09/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2019-09-17T02:17:32+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./categories/http/</loc>
+    <loc>https://example.com/series/http/</loc>
     <lastmod>2019-09-17T02:16:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/http%E5%8D%8F%E8%AE%AE/</loc>
+    <loc>https://example.com/tags/http/</loc>
     <lastmod>2019-09-17T02:16:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/09/2019/</loc>
+    <loc>https://example.com/blog/2019-09/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/</loc>
     <lastmod>2019-09-17T02:16:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/tcp/ip%E5%8D%8F%E8%AE%AE/</loc>
+    <loc>https://example.com/categories/web/</loc>
     <lastmod>2019-09-17T02:16:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/</loc>
+    <loc>https://example.com/tags/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B/</loc>
     <lastmod>2019-09-17T02:16:23+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/git/</loc>
+    <loc>https://example.com/tags/git/</loc>
     <lastmod>2019-09-17T02:15:22+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/github/</loc>
+    <loc>https://example.com/series/git/</loc>
     <lastmod>2019-09-17T02:15:22+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/09/2019/</loc>
+    <loc>https://example.com/blog/2019-09/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2019-09-17T02:15:22+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./categories/software-tool-study-git/</loc>
+    <loc>https://example.com/categories/software-tool-study/</loc>
     <lastmod>2019-09-17T02:15:22+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./categories/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>https://example.com/build/</loc>
+    <lastmod>2018-09-13T22:31:21+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/development/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>https://example.com/blog/</loc>
+    <lastmod>2018-09-02T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>/./getting-started-with-hugo/04/2014/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>https://example.com/java/</loc>
+    <lastmod>2015-08-19T20:29:37-07:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/go/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>https://example.com/tags/blog/</loc>
   </url>
   
   <url>
-    <loc>/./categories/golang/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>https://example.com/tags/hugo/</loc>
   </url>
   
   <url>
-    <loc>/./tags/golang/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>https://example.com/series/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
   </url>
   
   <url>
-    <loc>/./tags/hugo/</loc>
-    <lastmod>2014-04-02T00:00:00+00:00</lastmod>
+    <loc>https://example.com/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo/</loc>
   </url>
   
   <url>
-    <loc>/./archives/</loc>
+    <loc>https://example.com/blog/1-01/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://example.com/build/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</loc>
   </url>
   
 </urlset>

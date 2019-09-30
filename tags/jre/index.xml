@@ -1,22 +1,31 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>JRE on OrangeC的微博</title>
-    <link>/./tags/jre/</link>
-    <description>Recent content in JRE on OrangeC的微博</description>
+    <title>JRE on OrangeC的博客</title>
+    <link>https://example.com/tags/jre/</link>
+    <description>Recent content in JRE on OrangeC的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zn-Hans</language>
     <lastBuildDate>Tue, 17 Sep 2019 02:18:19 +0800</lastBuildDate>
     
-	<atom:link href="/./tags/jre/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.com/tags/jre/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Java 简介</title>
-      <link>/./java-%E7%AE%80%E4%BB%8B/09/2019/</link>
+      <link>https://example.com/blog/2019-09/java-%E7%AE%80%E4%BB%8B/</link>
       <pubDate>Tue, 17 Sep 2019 02:18:19 +0800</pubDate>
       
-      <guid>/./java-%E7%AE%80%E4%BB%8B/09/2019/</guid>
+      <guid>https://example.com/blog/2019-09/java-%E7%AE%80%E4%BB%8B/</guid>
+      <description>Java基础说明，Java开发环境、编译环境的介绍、执行原理等。</description>
+    </item>
+    
+    <item>
+      <title>Java 简介</title>
+      <link>https://example.com/java/01-java%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</link>
+      <pubDate>Tue, 17 Sep 2019 02:18:19 +0800</pubDate>
+      
+      <guid>https://example.com/java/01-java%E8%BF%90%E8%A1%8C%E7%8E%AF%E5%A2%83/</guid>
       <description>Java基础说明，Java开发环境、编译环境的介绍、执行原理等。</description>
     </item>
     

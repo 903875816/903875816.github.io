@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="OrangeC">
+  <meta name="description" content="">
+  
+  <meta property="og:title" content="使用Hugo搭建个人博客" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://example.com/blog/1-01/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" />
+<meta property="og:see_also" content="https://example.com/build/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/" />
+
+
+
+  <title>
+  
+       使用Hugo搭建个人博客 | OrangeC的博客 
+  
+  </title>
+
+  <link rel="canonical" href="https://example.com/blog/1-01/%E4%BD%BF%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/">
+
+  
+  
+
+  
+  <link href="https://example.com/css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="https://example.com/css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="https://example.com/css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="https://example.com/css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="https://example.com/css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="https://example.com/css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="https://example.com/img/zheng.png"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="https://example.com/js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="https://example.com/css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="https://example.com">
+          
+        <img class="avatar" src="https://example.com/img/zheng.png" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        <strong> OrangeC</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="https://example.com">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://example.com/blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://example.com/java/" >Java  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="https://example.com/build/" >Build  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('https://example.com/img/header-slides/raw_1515691746.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('https://example.com/img/header-slides//raw_1515847341.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="https://example.com">
+          
+            <img class="pull-right avatar avatar-md" src="https://example.com/img/profile.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="https://example.com">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>OrangeC的博客</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="//github.com/903875816" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="//instagram.com/you" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+                <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+    
+        
+            
+                <a href="mailto:604150318@qq.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="https://example.com/categories/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BAhugo"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 个人博客搭建——Hugo&#34; </a></li>
+      
+    
+    
+      
+        <li><a href="https://example.com/series/%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>个人博客</a></li>
+      
+    
+  </ul>
+
+  <div class="px-4 post-heading">使用Hugo搭建个人博客</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Sep 120, 1019</li>
+    
+
+    
+  </ul>
+  
+    <div class="view">
+      <img src="https://i.loli.net/2019/09/30/kB3cWAObK6dZ9rU.jpg" />
+    </div>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            <h1 id="安装hugo">安装hugo</h1>
+
+<ol>
+<li><p>下载Hugo的安装包。(主要介绍Windows的操作)</p>
+
+<ul>
+<li><p>Windows可以自行下载。<a href="https://github.com/gohugoio/hugo/releases">下载地址</a></p></li>
+
+<li><p>Ubuntu用户，可以使用apt快速安装</p>
+
+<pre><code class="language-shell">sudo apt-get install hugo
+</code></pre></li>
+</ul></li>
+
+<li><p>解压，把hugo.exe文件放到D:\Sofotware\hugo\hugo.exe(路径自定义，但尽量保证是英文路径)。</p></li>
+
+<li><p>把 D:\Sofotware\hugo\加到PATH。</p></li>
+
+<li><p>重启终端，安装完成。</p></li>
+</ol>
+
+<p><strong><em>参考：</em></strong> <a href="https://gohugo.io/getting-started/installing">Hugo官方安装使用教程</a></p>
+
+<h1 id="博客的搭建">博客的搭建</h1>
+
+<ol>
+<li><p>进入Hugo的<a href="https://gohugo.io/">官方主页</a>,点击快速开始，从第二步开始执行。</p></li>
+
+<li><p>建立新网站</p>
+
+<pre><code class="language-shell">hugo new site quickstart
+</code></pre></li>
+
+<li><p>添加主题(默认主题)</p>
+
+<pre><code class="language-shell">1. cd quickstart
+2. git init
+3. git submodule add https://github.com/budparrgohugo-theme-ananke.git themes/ananke`
+4. echo 'theme = &quot;ananke&quot;' &gt;&gt; config.toml
+</code></pre></li>
+</ol>
+
+<h1 id="blog文章的创建以及浏览">Blog文章的创建以及浏览</h1>
+
+<ol>
+<li><p>在博客中加入一篇Markdown的文章</p>
+
+<pre><code class="language-shell">hugo new posts/my-first-post.md
+</code></pre></li>
+
+<li><p>在post文件夹下就出现my-first-post.md文件</p></li>
+
+<li><p>打开my-first-post.md文件可以发现文件Header出现如下文字
+<img src="https://i.loli.net/2019/09/30/2AwSclZWfxnHgVM.png" alt="Header文字" /></p>
+
+<p><strong>注释：draft是草稿的意思将其改变成false就可以在博客上显现</strong></p></li>
+
+<li><p>打开Hugo服务器</p>
+
+<pre><code class="language-shell">hugo server
+</code></pre>
+
+<p>接着出现如下画面</br>
+<img src="https://i.loli.net/2019/09/30/vVErI54bUoTsFW9.png" alt="1569828580(1).png" /></p></li>
+
+<li><p>在浏览器中打开右下角的http地址就可以存储在本地的blog了。</p></li>
+</ol>
+
+<h1 id="切换主题">切换主题</h1>
+
+<blockquote>
+<p>官方教程自带的主题挺丑的，所以我准备换一个，换了一个，还是觉的挺丑的（可能是我不会用，手动二哈），准备再换一个，前面主题遇到的坑一会再说，先开始重新开始换主题</p>
+</blockquote>
+
+<p><img src="https://i.loli.net/2019/09/30/xSZy3KPXMO1JI9N.png" alt="1569830366(1).png" /></p>
+
+<ol>
+<li>点击<a href="https://themes.gohugo.io/">这里</a>去选择主题</li>
+<li>这一<a href="https://themes.gohugo.io/allinone/">主题</a>挺好看的试一下.
+<img src="https://i.loli.net/2019/09/30/uwBqIE3e4HK5yx1.png" alt="1569833172(1).png" /></li>
+
+<li><p>将网页往下翻，有一个<strong>Quick Star</strong>的标题，里面写的是如何下载主题，但是有点儿问题，这里用下面的代码打开电脑的终端将下面的代码clone到你的电脑本地的themes文件夹内。</p>
+
+<pre><code class="language-shell">cd theme
+git clone https://github.com/orianna-zzo/AllinOne.git themes
+</code></pre></li>
+
+<li><p>等待其下载完成，进入themes/AllinOne/exampleSite将其的config.toml拷贝出来并删掉原来的config.toml文件</p></li>
+
+<li><p>进入本地的<a href="http://localhost:1313/，可以发现主题就切换成功了">http://localhost:1313/，可以发现主题就切换成功了</a>
+<img src="https://i.loli.net/2019/09/30/JpUY3siNB2T1xhC.png" alt="1569835269(1).png" /></p></li>
+</ol>
+
+<h2 id="配置主题">配置主题</h2>
+
+<pre><code>大部分的配置文件的内容都在config.toml中，我们跟着[官方文档](https://themes.gohugo.io/allinone/#usage)来就行了。
+</code></pre>
+
+<h2 id="出现的问题">出现的问题</h2>
+
+<ol>
+<li><p>博客的时间出现了乱码，有如下报错</p>
+
+<pre><code class="language-shell">WARN 2019/09/30 22:18:45 Page's .RSSLink is deprecated and will be removed in a future release. Use the Output Format's link, e.g. something like:
+{{ with .OutputFormats.Get &quot;RSS&quot; }}{{ .RelPermalink }}{{ end }}.
+</code></pre></li>
+</ol>
+
+<p>初步定位是0.55 后版本的 Hugo 中 RSS 无法使用，还尚未解决，拟参考一下博客进行解决<a href="https://www.jianshu.com/p/d0798285ed77">沈维燕的blog</a></p>
+
+<ol>
+<li></li>
+</ol>
+
+<h2 id="如何在markdow中插入图片">如何在markdow中插入图片</h2>
+
+<p>在Markdown中插入文件是一个比较麻烦的的事，一般插入本地文件的话，上传到github会导致无法读取，很是不方便，在查找资料后，发现图片上传到图床然后在用链接读取是个行之有效的办法，下面就推荐一种在Markdown插入图片的方法。</p>
+
+<ol>
+<li>将需要在Markdown插入图片保存在本地</li>
+<li>打开<a href="https://sm.ms">SM.MS</a>(名字有点怪但非常好用的图床)</li>
+<li>将图片拖入框内点击upload</li>
+<li>选择Markdown下面的代码就是Markdown链接。</li>
+</ol>
+
+<h1 id="将本地博客上传github并绑定">将本地博客上传Github并绑定</h1>
+
+<h2 id="将blog上传到本地仓库">将Blog上传到本地仓库</h2>
+
+<ol>
+<li>进入Pbulic</li>
+<li>输入命令<code>git init</code>将文件git初始化</li>
+<li><code>git add .</code></li>
+<li><code>git commit .</code>将文件上传到本地仓库</li>
+</ol>
+
+<h2 id="上传到github仓库">上传到github仓库</h2>
+
+<ol>
+<li>在github上建立一个远程仓库，命名为xxx.github.io，xxx一定要是你的<strong>username</strong>,这个可以点击你的github账号的profile查看</li>
+<li>输入命令<code>get remove add origin git@github.com:xxx/c.github.io.git</code></li>
+<li><code>git push -u origin master</code></li>
+</ol>
+
+<h2 id="在github上查看的博客">在github上查看的博客</h2>
+
+<ol>
+<li>进入github的xxx.github.io仓库，点击setting</li>
+<li>把网页往下拉，可以发现一个GitHub Pages选项
+<code>Your site is published at http://orangec.info/</code></li>
+<li>点击网址即可进入</li>
+</ol>
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="https://example.com/tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="https://example.com/tags/blog" role="button">blog </a></li>
+      
+    
+      <li><a href="https://example.com/tags/hugo" role="button">hugo </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+                <a href=https://example.com/blog/2019-09/git%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span>Git基础命令</span>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%ae%89%e8%a3%85hugo">
+												 安装hugo
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%8d%9a%e5%ae%a2%e7%9a%84%e6%90%ad%e5%bb%ba">
+												 博客的搭建
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#blog%e6%96%87%e7%ab%a0%e7%9a%84%e5%88%9b%e5%bb%ba%e4%bb%a5%e5%8f%8a%e6%b5%8f%e8%a7%88">
+												 Blog文章的创建以及浏览
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%88%87%e6%8d%a2%e4%b8%bb%e9%a2%98">
+												 切换主题
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e9%85%8d%e7%bd%ae%e4%b8%bb%e9%a2%98">
+												 配置主题
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%87%ba%e7%8e%b0%e7%9a%84%e9%97%ae%e9%a2%98">
+												 出现的问题
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%a6%82%e4%bd%95%e5%9c%a8markdow%e4%b8%ad%e6%8f%92%e5%85%a5%e5%9b%be%e7%89%87">
+												 如何在markdow中插入图片
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%b0%86%e6%9c%ac%e5%9c%b0%e5%8d%9a%e5%ae%a2%e4%b8%8a%e4%bc%a0github%e5%b9%b6%e7%bb%91%e5%ae%9a">
+												 将本地博客上传Github并绑定
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%b0%86blog%e4%b8%8a%e4%bc%a0%e5%88%b0%e6%9c%ac%e5%9c%b0%e4%bb%93%e5%ba%93">
+												 将Blog上传到本地仓库
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%8a%e4%bc%a0%e5%88%b0github%e4%bb%93%e5%ba%93">
+												 上传到github仓库
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%9c%a8github%e4%b8%8a%e6%9f%a5%e7%9c%8b%e7%9a%84%e5%8d%9a%e5%ae%a2">
+												 在github上查看的博客
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="//github.com/903875816 " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+    
+      <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin-in mr-3" aria-hidden="true"></i></a>
+    
+
+    
+      <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+    <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus-g mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//instagram.com/you" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+    
+
+
+    
+        <a href="mailto:604150318@qq.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2019 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="https://example.com/js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="https://example.com/js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="https://example.com/js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="https://example.com/js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="https://example.com/js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="https://example.com/js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="https://example.com/js/main.js"></script>
+
+
+
+  
+  <script src="https://example.com/js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="https://example.com/js/vendors/katex/katex.min.js"> </script>
+  <script src="https://example.com/js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>其他 on OrangeC的微博</title>
-    <link>/./tags/%E5%85%B6%E4%BB%96/</link>
-    <description>Recent content in 其他 on OrangeC的微博</description>
+    <title>其他 on OrangeC的博客</title>
+    <link>https://example.com/tags/%E5%85%B6%E4%BB%96/</link>
+    <description>Recent content in 其他 on OrangeC的博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zn-Hans</language>
     <lastBuildDate>Wed, 18 Sep 2019 00:23:05 +0800</lastBuildDate>
     
-	<atom:link href="/./tags/%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.com/tags/%E5%85%B6%E4%BB%96/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Blog网站收藏</title>
-      <link>/./blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/09/2019/</link>
+      <link>https://example.com/blog/2019-09/blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/</link>
       <pubDate>Wed, 18 Sep 2019 00:23:05 +0800</pubDate>
       
-      <guid>/./blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/09/2019/</guid>
+      <guid>https://example.com/blog/2019-09/blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/</guid>
       <description>收藏大杂烩</description>
     </item>
     
