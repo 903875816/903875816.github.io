@@ -425,10 +425,6 @@ git clone https://github.com/orianna-zzo/AllinOne.git themes
 
 <p>初步定位是0.55 后版本的 Hugo 中 RSS 无法使用，还尚未解决，拟参考一下博客进行解决<a href="https://www.jianshu.com/p/d0798285ed77">沈维燕的blog</a></p>
 
-<ol>
-<li></li>
-</ol>
-
 <h2 id="如何在markdow中插入图片">如何在markdow中插入图片</h2>
 
 <p>在Markdown中插入文件是一个比较麻烦的的事，一般插入本地文件的话，上传到github会导致无法读取，很是不方便，在查找资料后，发现图片上传到图床然后在用链接读取是个行之有效的办法，下面就推荐一种在Markdown插入图片的方法。</p>
@@ -457,6 +453,7 @@ git clone https://github.com/orianna-zzo/AllinOne.git themes
 <li>在github上建立一个远程仓库，命名为xxx.github.io，xxx一定要是你的<strong>username</strong>,这个可以点击你的github账号的profile查看</li>
 <li>输入命令<code>get remove add origin git@github.com:xxx/c.github.io.git</code></li>
 <li><code>git push -u origin master</code></li>
+<li>第一次之后每回上传时可以只使用git push</li>
 </ol>
 
 <h2 id="在github上查看的博客">在github上查看的博客</h2>
@@ -467,6 +464,19 @@ git clone https://github.com/orianna-zzo/AllinOne.git themes
 <code>Your site is published at http://orangec.info/</code></li>
 <li>点击网址即可进入</li>
 </ol>
+
+<h2 id="出现的问题-1">出现的问题</h2>
+
+<ol>
+<li><p>发现通过github网址无法出现图片，怀疑是上传之后无法加载css，由于我是小白一只（暴风哭泣），没有办法找放到原因只有自己查相关的信息自己乱试，我感觉是congfig.toml里问题，将<code>baseURL= &quot;https://example.com&quot;</code>改成了<code>baseURL= &quot;/./&quot;</code>
+<img src="https://i.loli.net/2019/09/30/vsuFYQLRU4x7Ayj.png" alt="1569855981(1).png" />
+css可以成功加载了，虽然为什么还不太清楚，先mark一下以后学习网页相关知识再来从原理解决。</p></li>
+
+<li><p>这个模板在手机上的<strong>适配</strong>存在问题，以后会看下怎阳该进</p></li>
+</ol>
+
+<p>虽然还是有何多瑕疵但是我会努力的去维护的
+<img src="https://i.loli.net/2019/09/30/Zgspy6qBae3cuj8.png" alt="1569857058(1).png" /></p>
           </div>
 
           
@@ -790,6 +800,32 @@ git clone https://github.com/orianna-zzo/AllinOne.git themes
 										<li class="nav-item">
 						 					<a class="nav-link" href="#%e5%9c%a8github%e4%b8%8a%e6%9f%a5%e7%9c%8b%e7%9a%84%e5%8d%9a%e5%ae%a2">
 												 在github上查看的博客
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%87%ba%e7%8e%b0%e7%9a%84%e9%97%ae%e9%a2%98-1">
+												 出现的问题
 											</a>
 										</li>
 						 
