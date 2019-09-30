@@ -7,24 +7,24 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="OrangeC">
-  <meta name="description" content="Linux的基础命令简介">
+  <meta name="description" content="">
   
-  <meta property="og:title" content="linux基础命令" />
-<meta property="og:description" content="Linux的基础命令简介" />
+  <meta property="og:title" content="Windows&#43;Ubuntu双系统" />
+<meta property="og:description" content="" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/./blog/2019-09/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/" />
-<meta property="article:published_time" content="2019-09-17T02:17:32+08:00" />
-<meta property="article:modified_time" content="2019-09-17T02:17:32+08:00" /><meta property="og:see_also" content="/./blog/2019-09/windows-ubuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F/" />
+<meta property="og:url" content="/./blog/2019-09/windows-ubuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F/" />
+<meta property="article:published_time" content="2019-09-27T22:37:06+08:00" />
+<meta property="article:modified_time" content="2019-09-27T22:37:06+08:00" /><meta property="og:see_also" content="/./blog/2019-09/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/" />
 
 
 
   <title>
   
-       linux基础命令 | OrangeC的博客 
+       Windows&#43;Ubuntu双系统 | OrangeC的博客 
   
   </title>
 
-  <link rel="canonical" href="/././blog/2019-09/linux%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">
+  <link rel="canonical" href="/././blog/2019-09/windows-ubuntu%E5%8F%8C%E7%B3%BB%E7%BB%9F/">
 
   
   
@@ -287,7 +287,7 @@
   <ul class="post-meta li-x">
     
       
-        <li><a href="/./categories/linux"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> Linux </a></li>
+        <li><a href="/./categories/%E5%8F%8C%E7%B3%BB%E7%BB%9F"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> 双系统 </a></li>
       
     
     
@@ -297,11 +297,11 @@
     
   </ul>
 
-  <div class="px-4 post-heading">linux基础命令</div>
+  <div class="px-4 post-heading">Windows&#43;Ubuntu双系统</div>
 
   <ul class="post-meta li-x mt-1">
     
-      <li>Sep 20, 17099</li>
+      <li>Sep 100, 27099</li>
     
 
     
@@ -312,139 +312,70 @@
 
 
           <div class="post-content markdown">
-            
+            <h1 id="安装ubuntu19-04系统">安装Ubuntu19.04系统</h1>
 
-<h1 id="linux基础命令和-explainshell-com介绍">linux基础命令和 explainshell.com介绍</h1>
+<blockquote>
+<p>作为一个爱折腾的小伙，听老师说学习命令行最好是使用Linux系统,加之以前做材料计算的时候也用的是Linux，对这个系统还是挺“熟悉”的，想想装起来也不难，于是那时可能被驴踢了的脑袋准备在自己的电脑上装一个Windows+Ubuntu的双系统，结果TM的装了两天想死的心都有了。下面将会叙述一下安装的过程以及踩到的坑，为以后遇到相似的情况提供参考</p>
+</blockquote>
 
-<h2 id="linux基础命令">linux基础命令</h2>
-
-<h3 id="磁盘管理">磁盘管理</h3>
-
-<ul>
-<li><p><strong>ls命令</strong></p>
-
-<p>用于显示指定工作目录下之内容（列出目前工作目录所含之文件及子目录)</p>
-
-<p><strong>语法</strong>：</p>
-
-<p>ls [-alrtAFR] [name&hellip;]&rsquo;</p>
-
-<p><strong>参数</strong>：</p>
+<ol>
+<li>准备一台还可以呼吸的电脑，一个16g的U盘，一个强大的可以忍住咋电脑的内心就可以开干了。</li>
+<li>我安装的是Ubuntu19.04，安装步骤其实和安装windows类似先通过ultraISO将Ubuntu刻录进U盘。</li>
+<li>接下来的操作步骤其实很多blog写的很详细了，我主要参考了下面三篇。
 
 <ul>
-<li><p>-a 显示所有文件及目录 (ls内定将文件名或目录名称开头为&rdquo;.&ldquo;的视为隐藏档，不会列出)</p></li>
-
-<li><p>-l 除文件名称外，亦将文件型态、权限、拥有者、文件大小等资讯详细列出</p></li>
-
-<li><p>-r 将文件以相反次序显示(原定依英文字母次序)</p></li>
-
-<li><p>-t 将文件依建立时间之先后次序列出</p></li>
-
-<li><p>-A 同 -a ，但不列出 &ldquo;.&rdquo; (目前目录) 及 &ldquo;..&rdquo; (父目录)</p></li>
-
-<li><p>-F 在列出的文件名称后加一符号；</p></li>
-
-<li><p>-R 若目录下有文件，则以下之文件亦皆依序列出</p></li>
+<li><a href="https://blog.csdn.net/ly_222222/article/details/83591973">在Win10下安装Ubuntu18.04双系统</a></li>
+<li><a href="https://blog.csdn.net/s717597589/article/details/79117112/">win10下安装Ubuntu16.04双系统</a></li>
+<li><a href="https://blog.csdn.net/ajay666/article/details/75208509">最新图文讲解如何在win10环境下安装ubuntu双系统</a></li>
 </ul></li>
+</ol>
+
+<h1 id="遇到的坑">遇到的坑</h1>
+
+<h2 id="安装完之后无法进入主界面">安装完之后无法进入主界面</h2>
+
+<ol>
+<li>安装完成之后我的界面一直挺在Ubuntu读条标志那读条，无法进入主桌面</li>
+<li>我采用强制关机大法，结果开启后就出现了新的画面<img src="https://i.loli.net/2019/10/01/5opSP6OnlqiQtmc.jpg" alt="9a4e8ab364cf3d72a2f29cd399d9242.jpg" /></li>
+<li>在网上一查发现原因有很多种。这篇博客介绍了几种可能的原因<a href="https://blog.csdn.net/Csdoker/article/details/80140383">关于Ubuntu循环登陆界面</a></li>
+<li>经过一一试验。最大的可能是我的电脑中的显卡Nivdia与系统自带的驱动不兼容造成的。</li>
+</ol>
+
+<blockquote>
+<p>期间遇到的错误操作我就不一一阐述了，直接上解决方法</p>
+</blockquote>
+
+<h3 id="解决方法">解决方法</h3>
+
+<ol>
+<li>在主板或者商标出现的界面，按下F2,进入BiOS，关闭Sercurity的UEFI保护。</li>
+<li>在开机界面时，按下</key>E键</key></li>
+<li>修改他的启动程序，修改倒数第二行，将quite splash&ndash;改为quite splash nomodeset再按F10引导进入（这个进入不是100%成功，多试几次）</li>
+<li>成功进入之后第一件事做的换驱动换驱动换驱动（不要抱着进了一次，下一次也能进的侥幸心理）</li>
+
+<li><p>驱动怎么换请参考这几篇篇博客</p>
+
+<ul>
+<li><a href="https://blog.csdn.net/new_delete_/article/details/81544438">Ubuntu 18.04 安装NVIDIA显卡驱动教程</a></li>
+<li><a href="https://blog.csdn.net/u014682691/article/details/80605201">ubuntu安装显卡驱动的三种方法</a></li>
+<li><a href="https://blog.csdn.net/u014797226/article/details/79626693">vUbuntu 16.04安装NVIDIA驱动</a>&ndash;&gt;推荐</li>
 </ul>
 
-<h3 id="文件管理">文件管理</h3>
+<p><strong><em>注意：尽量选择自己去官网下在安装包来安装，千万不要使用软件更新中心的软件，那样是安装不成功的,打开Nividia的时候一定要有如下画面才算安装成功</em></strong>
+<img src="https://img-blog.csdn.net/20170205114025870?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSmFzb25aaGFuZ09P/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/Center" alt="成功画面" /></p></li>
+</ol>
 
-<ul>
-<li><p><strong>cat命令</strong></p>
+<p><strong>提醒</strong>：推荐方法中</p>
 
-<p>cat 命令用于连接文件并打印到标准输出设备上</p>
+<pre><code class="language-shell">sudo ./NVIDIA-Linux-x86_64-390.25.run -no-opengl-files
+</code></pre>
 
-<p><strong>语法</strong>：</p>
+<p>的<code>-no-opengl-files</code>非常重要没输入的话，会导致安装OpenGL文件，又重新进入死循环</p>
 
-<p>&lsquo;cat [-AbeEnstTuv] [&ndash;help] [&ndash;version] fileName&rsquo;</p>
+<h2 id="后记">后记</h2>
 
-<p><strong>参数</strong>:</p>
-
-<ul>
-<li><p>-n 或 &ndash;number：由 1 开始对所有输出的行数编号。</p></li>
-
-<li><p>-b 或 &ndash;number-nonblank：和 -n 相似，只不过对于空白行不编号。</p></li>
-
-<li><p>-s 或 &ndash;squeeze-blank：当遇到有连续两行以上的空白行，就代换为一行的空白行。</p></li>
-
-<li><p>-v 或 &ndash;show-nonprinting：使用 ^ 和 M- 符号，除了 LFD 和 TAB 之外。</p></li>
-
-<li><p>-E 或 &ndash;show-ends : 在每行结束处显示 $。</p></li>
-
-<li><p>-T 或 &ndash;show-tabs: 将 TAB 字符显示为 ^I。</p></li>
-
-<li><p>-A, &ndash;show-all：等价于 -vET。</p></li>
-
-<li><p>-e：等价于&rdquo;-vE&rdquo;选项；</p></li>
-
-<li><p>-t：等价于&rdquo;-vT&rdquo;选项；</p></li>
-</ul></li>
-
-<li><p><strong>mv命令</strong></p>
-
-<p>mv命令用来为文件或目录改名、或将文件或目录移入其它位置</p>
-
-<p><strong>语法</strong>：</p>
-
-<p>\&ldquo;&rsquo;
-mv [options] source dest
- mv [options] source&hellip; directory
-\&ldquo;&rsquo;</p>
-
-<p><strong>参数</strong>:</p>
-
-<ul>
-<li><p>-i: 若指定目录已有同名文件，则先询问是否覆盖旧文件;</p></li>
-
-<li><p>-f: 在mv操作要覆盖某已有的目标文件时不给任何指示;</p></li>
-</ul></li>
-
-<li><p><strong>touch命令</strong></p>
-
-<p>touch命令用于修改文件或者目录的时间属性，包括存取时间和更改时间。若文件不存在，系统会建立一个新的文件。</p>
-
-<p>ls -l 可以显示档案的时间记录。</p>
-
-<p><strong>语法</strong>：</p>
-
-<p>&lsquo;touch [-acfm][-d&lt;日期时间&gt;][-r&lt;参考文件或目录&gt;] [-t&lt;日期时间&gt;][&ndash;help][&ndash;version][文件或目录…]&rsquo;</p>
-
-<p><strong>参数</strong>:</p>
-
-<ul>
-<li><p>a 改变档案的读取时间记录。</p></li>
-
-<li><p>m 改变档案的修改时间记录。</p></li>
-
-<li><p>c 假如目的档案不存在，不会建立新的档案。与 &ndash;no-create 的效果一样。</p></li>
-
-<li><p>f 不使用，是为了与其他 unix 系统的相容性而保留。</p></li>
-
-<li><p>r 使用参考档的时间记录，与 &ndash;file 的效果一样。</p></li>
-
-<li><p>d 设定时间与日期，可以使用各种不同的格式。</p></li>
-
-<li><p>t 设定档案的时间记录，格式与 date 指令相同。</p></li>
-
-<li><p>&ndash;no-create 不会建立新档案。</p></li>
-
-<li><p>&ndash;help 列出指令格式。</p></li>
-
-<li><p>&ndash;version 列出版本讯息。</p></li>
-</ul></li>
-</ul>
-
-<h2 id="explainshell-com介绍">explainshell.com介绍</h2>
-
-<p><a href="https://explainshell.com/">explainshell.com</a>由Python编写的，帮助你解释命令行的网站。</p>
-
-<p><img src="https://img-blog.csdnimg.cn/20181107180243876.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NoYXRpbGE=,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述" /></p>
-
-<p>该网站在github上开源，源代码地址参考<a href="https://github.com/idank/explainshell">这里</a></p>
-
-<p><strong>使用方法</strong>：将你需要的执行的命令输入对话框，他会自动判断你的语句对错并给与你提醒@<a href="这里写自定义目录标题">TOC</a></p>
-
+<p>驱动成功安装之后登录的问题一般就解决了，Ubuntu还是非常好用的，下面贴一张魔改之后的Ubuntu界面（买不起Mac的我）
+<img src="https://i.loli.net/2019/10/01/4jKXY8NAU5kqi1C.png" alt="Screenshot from 2019-09-29 01-08-11.png" /></p>
           </div>
 
           
@@ -457,7 +388,10 @@ mv [options] source dest
   <li class="pr-0"><a href="/./tags/"><i class="fas fa-tags"></i></a></li>
   <div class="tags-sm">
     
-      <li><a href="/./tags/linux" role="button">linux </a></li>
+      <li><a href="/./tags/windows" role="button">Windows </a></li>
+      
+    
+      <li><a href="/./tags/ubuntu" role="button">Ubuntu </a></li>
       
     
   </div>
@@ -473,23 +407,16 @@ mv [options] source dest
           <div class="row pt-3">
             <div class="col-md-6">
               
-                <a href=/././blog/2019-09/http%E5%8D%8F%E8%AE%AE%E5%9F%BA%E7%A1%80/ class="post-meta">Previous
+                <a href=/././blog/2019-09/java%E6%8E%A5%E5%8F%A3%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB/ class="post-meta">Previous
                   <div class="pt-2 pb-5 d-flex">
                     <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
-                    <span>HTTP协议基础</span>
+                    <span>Java接口与内部类</span>
                   </div>
                 </a>
               
             </div>
             
             <div class="col-md-6 text-right" >
-              
-                <a href=/././blog/2019-09/java-%E7%AE%80%E4%BB%8B/ class="post-meta">Next
-                  <div class="pt-2 pb-5 flex-reverse">
-                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
-                    <span>Java 简介</span>
-                  </div>
-                </a>
               
             </div>
           </div>
@@ -535,8 +462,30 @@ mv [options] source dest
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#linux%e5%9f%ba%e7%a1%80%e5%91%bd%e4%bb%a4%e5%92%8c-explainshell-com%e4%bb%8b%e7%bb%8d">
-												 linux基础命令和 explainshell.com介绍
+						 					<a class="nav-link" href="#%e5%ae%89%e8%a3%85ubuntu19-04%e7%b3%bb%e7%bb%9f">
+												 安装Ubuntu19.04系统
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e9%81%87%e5%88%b0%e7%9a%84%e5%9d%91">
+												 遇到的坑
 											</a>
 										</li>
 						 
@@ -559,8 +508,8 @@ mv [options] source dest
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#linux%e5%9f%ba%e7%a1%80%e5%91%bd%e4%bb%a4">
-												 linux基础命令
+						 					<a class="nav-link" href="#%e5%ae%89%e8%a3%85%e5%ae%8c%e4%b9%8b%e5%90%8e%e6%97%a0%e6%b3%95%e8%bf%9b%e5%85%a5%e4%b8%bb%e7%95%8c%e9%9d%a2">
+												 安装完之后无法进入主界面
 											</a>
 										</li>
 						 
@@ -587,38 +536,8 @@ mv [options] source dest
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#%e7%a3%81%e7%9b%98%e7%ae%a1%e7%90%86">
-												 磁盘管理
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#%e6%96%87%e4%bb%b6%e7%ae%a1%e7%90%86">
-												 文件管理
+						 					<a class="nav-link" href="#%e8%a7%a3%e5%86%b3%e6%96%b9%e6%b3%95">
+												 解决方法
 											</a>
 										</li>
 						 
@@ -645,8 +564,8 @@ mv [options] source dest
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#explainshell-com%e4%bb%8b%e7%bb%8d">
-												 explainshell.com介绍
+						 					<a class="nav-link" href="#%e5%90%8e%e8%ae%b0">
+												 后记
 											</a>
 										</li>
 						 
