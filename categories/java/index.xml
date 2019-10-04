@@ -6,10 +6,19 @@
     <description>Recent content in Java on OrangeC的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Wed, 02 Oct 2019 15:49:05 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 04 Oct 2019 22:40:09 +0800</lastBuildDate>
     
 	<atom:link href="/./categories/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Java常用类</title>
+      <link>/./blog/2019-10/java%E5%B8%B8%E7%94%A8%E7%B1%BB/</link>
+      <pubDate>Fri, 04 Oct 2019 22:40:09 +0800</pubDate>
+      
+      <guid>/./blog/2019-10/java%E5%B8%B8%E7%94%A8%E7%B1%BB/</guid>
+      <description>学习java常见的几种基本类。Date、calender、stringbuilder、BigDecimal等</description>
+    </item>
     
     <item>
       <title>如何通过javafork进程以及实现文件的遍历</title>

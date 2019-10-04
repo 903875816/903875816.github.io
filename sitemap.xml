@@ -4,36 +4,46 @@
   
   <url>
     <loc>/./categories/</loc>
-    <lastmod>2019-10-02T15:49:05+08:00</lastmod>
+    <lastmod>2019-10-04T22:40:09+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/fork/</loc>
-    <lastmod>2019-10-02T15:49:05+08:00</lastmod>
+    <loc>/./tags/class/</loc>
+    <lastmod>2019-10-04T22:40:09+08:00</lastmod>
   </url>
   
   <url>
     <loc>/./categories/java/</loc>
-    <lastmod>2019-10-02T15:49:05+08:00</lastmod>
+    <lastmod>2019-10-04T22:40:09+08:00</lastmod>
   </url>
   
   <url>
     <loc>/./series/java%E5%AD%A6%E4%B9%A0/</loc>
-    <lastmod>2019-10-02T15:49:05+08:00</lastmod>
+    <lastmod>2019-10-04T22:40:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/./blog/2019-10/java%E5%B8%B8%E7%94%A8%E7%B1%BB/</loc>
+    <lastmod>2019-10-04T22:40:09+08:00</lastmod>
   </url>
   
   <url>
     <loc>/./</loc>
-    <lastmod>2019-10-02T15:49:05+08:00</lastmod>
+    <lastmod>2019-10-04T22:40:09+08:00</lastmod>
   </url>
   
   <url>
     <loc>/./series/</loc>
-    <lastmod>2019-10-02T15:49:05+08:00</lastmod>
+    <lastmod>2019-10-04T22:40:09+08:00</lastmod>
   </url>
   
   <url>
     <loc>/./tags/</loc>
+    <lastmod>2019-10-04T22:40:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/./tags/fork/</loc>
     <lastmod>2019-10-02T15:49:05+08:00</lastmod>
   </url>
   
@@ -223,12 +233,12 @@
   </url>
   
   <url>
-    <loc>/./tags/git/</loc>
+    <loc>/./series/git/</loc>
     <lastmod>2019-09-17T02:15:22+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./series/git/</loc>
+    <loc>/./tags/git/</loc>
     <lastmod>2019-09-17T02:15:22+08:00</lastmod>
   </url>
   

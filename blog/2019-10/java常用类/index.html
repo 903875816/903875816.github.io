@@ -7,24 +7,24 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
   <meta name="author" content="OrangeC">
-  <meta name="description" content="收藏大杂烩">
+  <meta name="description" content="学习java常见的几种基本类。Date、calender、stringbuilder、BigDecimal等">
   
-  <meta property="og:title" content="Blog网站收藏" />
-<meta property="og:description" content="收藏大杂烩" />
+  <meta property="og:title" content="Java常用类" />
+<meta property="og:description" content="学习java常见的几种基本类。Date、calender、stringbuilder、BigDecimal等" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/./blog/2019-09/blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/" />
-<meta property="article:published_time" content="2019-09-18T00:23:05+08:00" />
-<meta property="article:modified_time" content="2019-09-18T00:23:05+08:00" />
+<meta property="og:url" content="/./blog/2019-10/java%E5%B8%B8%E7%94%A8%E7%B1%BB/" />
+<meta property="article:published_time" content="2019-10-04T22:40:09+08:00" />
+<meta property="article:modified_time" content="2019-10-04T22:40:09+08:00" />
 
 
 
   <title>
   
-       Blog网站收藏 | OrangeC的博客 
+       Java常用类 | OrangeC的博客 
   
   </title>
 
-  <link rel="canonical" href="/././blog/2019-09/blog%E7%BD%91%E7%AB%99%E6%94%B6%E8%97%8F/">
+  <link rel="canonical" href="/././blog/2019-10/java%E5%B8%B8%E7%94%A8%E7%B1%BB/">
 
   
   
@@ -287,21 +287,21 @@
   <ul class="post-meta li-x">
     
       
-        <li><a href="/./categories/blog%E6%94%B6%E8%97%8F"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> Blog收藏 </a></li>
+        <li><a href="/./categories/java"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> Java </a></li>
       
     
     
       
-        <li><a href="/./series/%E5%85%B6%E4%BB%96"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>其他</a></li>
+        <li><a href="/./series/java%E5%AD%A6%E4%B9%A0"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>JAVA学习</a></li>
       
     
   </ul>
 
-  <div class="px-4 post-heading">Blog网站收藏</div>
+  <div class="px-4 post-heading">Java常用类</div>
 
   <ul class="post-meta li-x mt-1">
     
-      <li>Sep 120, 18099</li>
+      <li>Sep 100, 4109</li>
     
 
     
@@ -314,45 +314,167 @@
           <div class="post-content markdown">
             
 
-<h1 id="java">Java</h1>
+<h1 id="java中的常用类">Java中的常用类</h1>
 
-<ul>
-<li><p><a href="https://snailclimb.top/JavaGuide/">JavaGuide-Snailclimb</a>(包含了Java的各种知识资料，很齐全。)</p>
+<h2 id="日期类">日期类</h2>
 
-<h2 id="java基础">java基础</h2>
+<pre><code class="language-java">package main;
 
-<h3 id="staic关键字">staic关键字</h3></li>
 
-<li><p><a href="https://blog.csdn.net/qq_34337272/article/details/82766943">static 关键字详解</a></p></li>
 
-<li><p><a href="https://www.cnblogs.com/lukelook/p/11183155.html">static代码块和普通代码块区别</a></p></li>
+import javafx.scene.input.DataFormat;
 
-<li><p><a href="https://blog.csdn.net/weixin_37766296/article/details/80545283">Java中类的加载顺序介绍(ClassLoader)</a></p></li>
+import java.sql.SQLOutput;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
-<li><p><a href="https://www.cnblogs.com/heizai002/p/6862625.html">Java倒计时三种简单实现方式</a></p>
 
-<h2 id="java进阶">java进阶</h2>
+public class TestDate {
+        public static void main(String[] args) throws InterruptedException, ParseException {
+            /*以下是Date类*/
+            Date date = new Date();//默认获取当前系统时间。。。。  （重点）
+            System.out.println(date);
+            System.out.println(date.toLocaleString());//获取本地时间格式
+            System.out.println(date.toGMTString());//GMT格式
+            System.out.println(date.getYear()+1900);//年份
+            System.out.println(date.getMonth()+1);//月份
+            System.out.println(date.getDate());//日子
+            System.out.println(date.getHours());//小时
+            System.out.println(date.getMinutes());//分钟
+            System.out.println(date.getSeconds());//秒
 
-<h2 id="gug处理">Gug处理</h2>
+            /*以下是DateFormal类*/
+            SimpleDateFormat sdf = new SimpleDateFormat(&quot;yyyy年MM月dd日 HH时mm分ss秒&quot;);
+            String d = sdf.format(date);
+            System.out.println(d);//输出时间格式&quot;2019-10-04 下午21:16:40&quot;
 
-<h3 id="idea">IDEA</h3></li>
 
-<li><p><a href="https://www.cnblogs.com/xiemingjun/p/10652665.html">IDEA 运行spingboot时出现Process finished with exit code -1073741819 (0xC0000005)</a></p>
 
-<h2 id="java-设计模式">java 设计模式</h2></li>
+            /***Thread.sleep()是Thread类的一个静态方法，使当前线程休眠，进入阻塞状态（暂停执行），如果线程在睡眠状态被中断，将会抛出IterruptedException中断异常。。主要方法如下：
+               【a】sleep(long millis)  线程睡眠 millis 毫秒
+                【b】sleep(long millis, int nanos)  线程睡眠 millis 毫秒 + nanos 纳秒
+             ****/
+            /*设计一个一个小时的记时器*/
+            int i=0;
+            System.out.println(&quot;一个小时后叫醒我&quot;);
+                while(i&lt;3600){
+                    Thread.sleep(1000);//thread.sleep方法使当前进程停止进入堵塞状态(单位:1毫秒)
+                    Date date1 = new Date();
+                    SimpleDateFormat sdf1 = new SimpleDateFormat(&quot;yyyy-MM-dd 下午HH:mm:ss&quot;);
+                    String timeCount= sdf1.format(date1);
+                    System.out.println(timeCount);
+                    i++;
+//                    break;
+                }
+            System.out.println(&quot;时间到了,该起床了&quot;);
 
-<li><p><a href="https://www.jianshu.com/p/e2a2fe3555b9">Builder设计模式01</a>(比较好的关于Builder设计模式的blog)</p></li>
-</ul>
 
-<h1 id="小工具">小工具</h1>
 
-<ul>
-<li><a href="https://www.processon.com">UML在线绘图</a>(一个在线的UML绘图网站)</li>
-</ul>
+            /*日历类 Calender*/
+            /***
+             * java.util.Calendar类；日历类
+             *
+             * Calendar类是一个抽象类，里边提供了很多操作日历字段的方法（YEAR、MONTH、DAY_OF_MONTH、HOUR)
+             * Calendar类无法直接创建对象使用，里边有一个静态方法叫getInstance(),该方法返回了Calendar类的子类对象
+             * static Calendar getInstance() 使用默认时区和语言环境获得一个日历。
+             ***/
+            Calendar ca=Calendar.getInstance();
+            System.out.println(ca.get(Calendar.YEAR));//当前的年份
+            System.out.println(ca.get(Calendar.MONTH)+1);//当前的月份
+            System.out.println(ca.get(Calendar.DAY_OF_MONTH));//当前的日子天数
+            System.out.println(ca.get(Calendar.HOUR_OF_DAY));//当前时几点
+            System.out.println(ca.get(Calendar.MINUTE));//分钟数
+            System.out.println(ca.get(Calendar.SECOND));//秒
+            //星期天 1   星期一 2 。。。。
+            System.out.println(ca.get(Calendar.DAY_OF_WEEK)-1);//星期数
 
-<h1 id="python">Python</h1>
+            //获取距离1970年1月1号8点相隔的毫秒数
+            long time=ca.getTimeInMillis();
+            System.out.println(time);
 
-<h1 id="知乎大杂烩">知乎大杂烩</h1>
+            //获取指定日期当月的最大天数
+            int maxDay=ca.getActualMaximum(ca.DAY_OF_MONTH);
+            System.out.println((ca.get(Calendar.MONTH)+1)+&quot;的最大天数为:&quot;+maxDay);
+
+            //根据指定的日期进行设置
+            //2019 9 29
+            Calendar ca1=Calendar.getInstance();
+            ca1.set(2019, 8,29); //不设置时分秒默认值是当前系统时间。。。。
+            System.out.println(ca1.get(Calendar.DAY_OF_WEEK)-1);
+            //将日历类转成日期类
+            Date date3=ca1.getTime();
+            System.out.println(date3.toLocaleString());
+        }
+}
+</code></pre>
+
+<h2 id="字符串stringbuilder">字符串Stringbuilder</h2>
+
+<pre><code class="language-java">/*加强版的字符串处理*/
+            /**
+             * 在程序开发过程中，我们常常碰到字符串连接的情况，方便和直接的方式是通过&quot;+&quot;符号来实现，
+             * 但是这种方式达到目的的效率比较低，且每执行一次都会创建一个String对象，即耗时，又浪费空间。
+             * 一般用于短字符的拼接
+             * 使用StringBuilder类就可以避免这种问题的发生，下面就Stringbuilder的使用做个简要的总结
+             *
+             **/
+            /**
+             * A mutable sequence of characters.  This class provides an API compatible
+             * with {@code StringBuffer}, but with no guarantee of synchronization.
+             * This class is designed for use as a drop-in replacement for
+             * {@code StringBuffer} in places where the string buffer was being
+             * used by a single thread (as is generally the case).   Where possible,
+             * it is recommended that this class be used in preference to
+             * {@code StringBuffer} as it will be faster under most implementations.
+             * 这里说这是一个可变的字符串,这个类为StringBuffer提供一个兼容的API,但不能保证可用。
+             * StringBuilder类一般用做单线程的字符串处理
+             * Stringbuff类一般用于多线程的处理
+             **/
+            StringBuilder sb = new StringBuilder();
+            System.out.println(&quot;初始容量:&quot;+sb.capacity());
+            sb.append(&quot;ch&quot;);
+            sb.append(&quot;111&quot;);
+            sb.append(&quot;ccccccccc&quot; );//字符传连接
+            System.out.println(sb);//打印这个字符串
+            System.out.println(sb.insert(4,&quot;我飞了&quot;));
+            System.out.println(&quot;现在的容量:&quot;+sb.capacity());//在第四个字符后加一个字符串
+            sb.setCharAt(1, 'M');
+            System.out.println(sb);
+            //根据指定索引删除 字符
+            sb.deleteCharAt(0);
+            System.out.println(sb.toString());
+            //根据范围删除[0,3)
+            sb.delete(0, 3);
+            System.out.println(sb.toString());
+            /***
+</code></pre>
+
+<h2 id="bigdecimal-如何处理大数据量">BigDecimal(如何处理大数据量)</h2>
+
+<p>```java
+/***
+             Bigdecimal:专门用于处理高精度的数据的一个工具类。。。。
+             理论上对于精度以及 取值范围没有限制
+             **/
+             BigDecimal num1=new BigDecimal(0.1);
+             System.out.println(num1);
+             String str=&ldquo;&rdquo;+num1;
+             System.out.println(str.length());</p>
+
+<pre><code>         BigDecimal num2=new BigDecimal(&quot;0.12315476153871263821253781263871213126783621984169843127309216398217309217309213703517236187263198273981239213712903712093&quot;);
+         System.out.println(num2);
+
+         BigDecimal num3=new BigDecimal(&quot;1981390172093172309127331872369821739812730923158721531527835127351287351278351287351287315237812531783511370921739217391273192731092731921739873209127398217398217312&quot;);
+         BigDecimal num4=num3.multiply(num3);
+         System.out.println((&quot;&quot;+num4).length());
+
+         字符串的转换
+         int age=Integer.parseInt(ageStr);//直接返回int类型的数据.....
+        int score=Integer.valueOf(scoreStr);//直接返回 Integer类型的数据。。
+```
+</code></pre>
 
           </div>
 
@@ -366,7 +488,7 @@
   <li class="pr-0"><a href="/./tags/"><i class="fas fa-tags"></i></a></li>
   <div class="tags-sm">
     
-      <li><a href="/./tags/%E5%85%B6%E4%BB%96" role="button">其他 </a></li>
+      <li><a href="/./tags/class" role="button">class </a></li>
       
     
   </div>
@@ -382,23 +504,16 @@
           <div class="row pt-3">
             <div class="col-md-6">
               
-                <a href=/././blog/2019-09/java-%E6%95%B0%E7%BB%84/ class="post-meta">Previous
+                <a href=/././blog/2019-10/%E5%A6%82%E4%BD%95%E9%80%9A%E8%BF%87javafork%E8%BF%9B%E7%A8%8B%E4%BB%A5%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E7%9A%84%E9%81%8D%E5%8E%86/ class="post-meta">Previous
                   <div class="pt-2 pb-5 d-flex">
                     <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
-                    <span>Java 数组</span>
+                    <span>如何通过javafork进程以及实现文件的遍历</span>
                   </div>
                 </a>
               
             </div>
             
             <div class="col-md-6 text-right" >
-              
-                <a href=/././blog/2019-09/java-%E7%BB%A7%E6%89%BF/ class="post-meta">Next
-                  <div class="pt-2 pb-5 flex-reverse">
-                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
-                    <span>Java 继承</span>
-                  </div>
-                </a>
               
             </div>
           </div>
@@ -444,8 +559,8 @@
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#java">
-												 Java
+						 					<a class="nav-link" href="#java%e4%b8%ad%e7%9a%84%e5%b8%b8%e7%94%a8%e7%b1%bb">
+												 Java中的常用类
 											</a>
 										</li>
 						 
@@ -468,64 +583,8 @@
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#java%e5%9f%ba%e7%a1%80">
-												 java基础
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#staic%e5%85%b3%e9%94%ae%e5%ad%97">
-												 staic关键字
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#java%e8%bf%9b%e9%98%b6">
-												 java进阶
+						 					<a class="nav-link" href="#%e6%97%a5%e6%9c%9f%e7%b1%bb">
+												 日期类
 											</a>
 										</li>
 						 
@@ -550,8 +609,8 @@
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#gug%e5%a4%84%e7%90%86">
-												 Gug处理
+						 					<a class="nav-link" href="#%e5%ad%97%e7%ac%a6%e4%b8%b2stringbuilder">
+												 字符串Stringbuilder
 											</a>
 										</li>
 						 
@@ -573,113 +632,17 @@
 								
 									<ul class="nav">
 								
-									<ul class="nav">
-								
 								
 
 										<li class="nav-item">
-						 					<a class="nav-link" href="#idea">
-												 IDEA
+						 					<a class="nav-link" href="#bigdecimal-%e5%a6%82%e4%bd%95%e5%a4%84%e7%90%86%e5%a4%a7%e6%95%b0%e6%8d%ae%e9%87%8f">
+												 BigDecimal(如何处理大数据量)
 											</a>
 										</li>
 						 
 								
 								
 									</ul>
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#java-%e8%ae%be%e8%ae%a1%e6%a8%a1%e5%bc%8f">
-												 java 设计模式
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#%e5%b0%8f%e5%b7%a5%e5%85%b7">
-												 小工具
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#python">
-												 Python
-											</a>
-										</li>
-						 
-								
-								
-									</ul>
-								
-							
-						
-				 
-						
-						
-							
-								
-								
-									<ul class="nav">
-								
-								
-
-										<li class="nav-item">
-						 					<a class="nav-link" href="#%e7%9f%a5%e4%b9%8e%e5%a4%a7%e6%9d%82%e7%83%a9">
-												 知乎大杂烩
-											</a>
-										</li>
-						 
-								
 								
 									</ul>
 								
