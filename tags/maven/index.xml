@@ -17,7 +17,7 @@
       <pubDate>Fri, 25 Oct 2019 17:34:20 +0800</pubDate>
       
       <guid>/./blog/2019-10/maven%E5%85%A5%E9%97%A8/</guid>
-      <description>Java基础说明，Java开发环境、编译环境的介绍、执行原理等。</description>
+      <description>Maven项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的项目管理工具软件。Maven这个单词来自于意第绪语（犹太语），意为知识的积累，最初在Jakata Turbine项目中用来简化构建过程。当时有一些项目（有各自Ant build文件），仅有细微的差别，而JAR文件都由CVS来维护。于是希望有一种标准化的方式构建项目，一个清晰的方式定义项目的组成，一个容易的方式发布项目的信息，以及一种简单的方式在多个项目中共享JARs。。</description>
     </item>
     
   </channel>
