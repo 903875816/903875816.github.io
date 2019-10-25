@@ -168,12 +168,12 @@
   </url>
   
   <url>
-    <loc>/./series/%E5%85%B6%E4%BB%96/</loc>
+    <loc>/./tags/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2019-09-18T00:23:05+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./tags/%E5%85%B6%E4%BB%96/</loc>
+    <loc>/./series/%E5%85%B6%E4%BB%96/</loc>
     <lastmod>2019-09-18T00:23:05+08:00</lastmod>
   </url>
   
@@ -253,12 +253,12 @@
   </url>
   
   <url>
-    <loc>/./tags/git/</loc>
+    <loc>/./series/git/</loc>
     <lastmod>2019-09-17T02:15:22+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/./series/git/</loc>
+    <loc>/./tags/git/</loc>
     <lastmod>2019-09-17T02:15:22+08:00</lastmod>
   </url>
   
