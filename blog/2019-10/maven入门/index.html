@@ -1,0 +1,1201 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="OrangeC">
+  <meta name="description" content="Java基础说明，Java开发环境、编译环境的介绍、执行原理等。">
+  
+  <meta property="og:title" content="Maven入门" />
+<meta property="og:description" content="Java基础说明，Java开发环境、编译环境的介绍、执行原理等。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/./blog/2019-10/maven%E5%85%A5%E9%97%A8/" />
+<meta property="article:published_time" content="2019-10-25T17:34:20+08:00" />
+<meta property="article:modified_time" content="2019-10-25T17:34:20+08:00" />
+
+
+
+  <title>
+  
+       Maven入门 | OrangeC的博客 
+  
+  </title>
+
+  <link rel="canonical" href="/././blog/2019-10/maven%E5%85%A5%E9%97%A8/">
+
+  
+  
+
+  
+  <link href="/./css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="/./css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="/./css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="/./css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="/./css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="/./css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="/./img/zheng.png"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="/./js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="/./css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="/././">
+          
+        <img class="avatar" src="/./img/zheng.png" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        <strong> OrangeC</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="/././">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="/./blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="/./java/" >Java  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="/./build/" >Build  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('/img/header-slides/raw_1515691746.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('/img/header-slides//raw_1515847341.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="/././">
+          
+            <img class="pull-right avatar avatar-md" src="/./img/profile.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="/././">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>OrangeC的博客</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="//github.com/903875816" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="//instagram.com/you" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+                <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+    
+        
+            
+                <a href="mailto:604150318@qq.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="/./categories/java"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> Java </a></li>
+      
+    
+    
+      
+        <li><a href="/./series/java%E5%AD%A6%E4%B9%A0"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>JAVA学习</a></li>
+      
+    
+  </ul>
+
+  <div class="px-4 post-heading">Maven入门</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Sep 50, 25109</li>
+    
+
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            
+
+<h1 id="maven入门">Maven入门</h1>
+
+<blockquote>
+<p><a href="https://baike.baidu.com/item/Maven">Maven</a>项目对象模型(POM)，可以通过一小段描述信息来管理项目的构建，报告和文档的<a href="https://baike.baidu.com/item/项目管理工具/6854630">项目管理工具</a>软件。</p>
+</blockquote>
+
+<h3 id="java的包管理"><strong>Java的包管理</strong></h3>
+
+<blockquote>
+<p>包管理的本质是告诉JVM如何找到所需的第三方库，以及如何有效的解决版本冲突、屏蔽等问题(使classpath hell变成classpath heaven)。</p>
+</blockquote>
+
+<h4 id="包管理的历史"><strong>包管理的历史</strong></h4>
+
+<blockquote>
+<p><strong>远古时代</strong>，在没有自动化构建工具之前，对于使用第三方库以及引入一些需要依赖的jar包，使需要通过手动写命令使其编译运行(如下)，人力消耗和出错的可能性呈几何倍数增长。
+<strong>Apache Ant时代</strong>，手动下载jar包，放在目录中，并且配置XML，之定编译的源代码目录，依赖的jar包，输出目录的等，缺点是需要第三方下载，需要想自己造轮子，未能有效解决classpath hell的问题。<strong>Maven时代</strong>，其使用先进的项目结构和项目约定有效的解决classpath hell问题，极大的节省了人力物力。</p>
+</blockquote>
+
+<pre><code class="language-shell">&quot;C:\Program Files\Java\jdk1.8.0_102\bin\java.exe&quot; &quot;-javaagent:E:\Program Files\JetBrains\
+IntelliJ IDEA 2019.2.3\lib\idea_rt.jar=50567:E:\Program Files\JetBrains\IntelliJ IDEA 2019.2.3\
+bin&quot; -Dfile.encoding=UTF-8 -classpath &quot;C:\Program Files\Java\jdk1.8.0_102\jre\lib\charsets.jar;C:\Program Files\Java
+\jdk1.8.0_102\
+jre\lib\deploy.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext\access-bridge-64.jar;C:\
+Program Files\Java\jdk1.8.0_102\jre\lib\ext\cldrdata.jar;C:\Program Files\Java\jdk1.8.0_102\
+jre\lib\ext\dnsns.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext\jaccess.jar;C:\
+Program Files\Java\jdk1.8.0_102\jre\lib\ext\jfxrt.jar;C:\Program Files\Java\jdk1.8.0_102\
+jre\lib\ext\localedata.jar;C:\Program Files\Java\jdk1.8.0_102\jre\lib\ext\nashorn.jar;C:\
+Program Files\Java\jdk1.8.0_102\jre\lib\ext\sunec.jar;C:\Program Files\Java\jdk1.8.0_102\
+等等
+</code></pre>
+
+<h4 id="jvm的类生命周期-类的加载机制"><strong>Jvm的类生命周期——类的加载机制</strong></h4>
+
+<blockquote>
+<p><a href="https://juejin.im/post/5d634864e51d4561ee1bdf8c#comment">参考博客————JVM类加载机制——类的生命周期</a></p>
+</blockquote>
+
+<p><img src="https://user-gold-cdn.xitu.io/2019/8/26/16ccd0b1e9e1f7ff?imageView2/0/w/1280/h/960/format/webp/ignore-error/1" alt="Jvm的类生命周期——类的加载机制" /></p>
+
+<blockquote>
+<p>限定类名：就是类名全称，带包路径的用点隔开，例如: java.lang.String。
+非限定(non-qualified)类名：     ，就是平常说的类名 不带包的，例如：String。
+非限定类名是相对于限定类名来说的，在Java中有很多类，不同的类之间会存在相同的函数或者方法，所以有时候就需要限定类名来调包。 而如果不存在相同的函数或者方法 ，就可以使用非限定(non-qualified)类名。</p>
+</blockquote>
+
+<h4 id="类的路径-classpath"><strong>类的路径（Classpath）</strong></h4>
+
+<h5 id="如何找到类的路径"><strong>如何找到类的路径</strong></h5>
+
+<p><img src="https://i.loli.net/2019/10/25/WTSvrfVNiLMEz1q.png" alt="1572002832(1).png" /></p>
+
+<p>如上在IDEA中，红框中Run状态栏的命令其实就是该类的执行命令，其中<code>-classpath+路径</code>就是付给java的执行程序的类路径的参数，所有的与执行类相关的类class文件都可以在路径参数中找到，</p>
+
+<h4 id="classpath-hell"><strong>Classpath hell</strong></h4>
+
+<blockquote>
+<p>JAR地狱是一个诙谐的说法，指的是由Java类加载机制的特性引发的一系列问题。其中一些问题是彼此相互影响，而其他的则是独立的。<a href="https://toutiao.io/posts/452124/app_preview">JAR 地狱 (JAR Hell)</a></p>
+</blockquote>
+
+<h5 id="具体表现"><strong>具体表现</strong></h5>
+
+<ol>
+<li><p><strong>依赖往往难以言明</strong></p>
+
+<p>一个JAR包无法以Java虚拟机(JVM)能够理解的方式来描述它依赖于哪些JAR。因此，想要识别和满足这些依赖就需要来自于外部的手段。作为开发者而言，他需要手动地查阅指定文档，找到正确的项目并下载相应的JAR文件，然后将这些JAR添加到自己项目中去。此外还有一种情况会使得这个过程更加复杂，那就是可选的依赖。也就是说只有需要使用特定功能时，一个JAR包才会依赖的别的JAR包。
+对于那些无法满足的依赖，Java运行时系统只有在真正需要访问这些依赖时才能检测到该情况。这时运行时系统将会抛出NoClassDefFoundError异常，进而导致正在运行的应用程序崩溃。</p></li>
+
+<li><p><strong>依赖具有传递性</strong></p>
+
+<p>传递性依赖：不同的类之间的相互引用是具有传递性的。类所依赖的类还会依赖其他的类。在控制台想使Java程序顺利的跑动，往往需要很长的类路径参数，这种情况会让情况变得异常复杂，并将使得人力消耗和出错的可能性呈几何倍数增长，这就是由于类的传递性依赖。因此引入一个自动化的Java工具是十分有必要的。</p></li>
+
+<li><p><strong>屏蔽</strong></p>
+
+<p>有时classpath中不同的JAR包会包含限定名完全相同的类。例如一个类库存在两个不同的版本，例如一个包含了所有依赖的Fat JAR(译者注：Fat JAR是将所有依赖和资源文件都打包成一个JAR包)又被当成standalone的JAR来使用，例如一个类库被重命名后又再次被加到classpath中。JVM总是从classpath中第一个包含某个类的JAR包里加载该类，这个被加载的类将会“屏蔽”该类的其他版本，使这些类变得不可用。
+如果这些不同版本的类在语义上有所区别，将会导致各类问题，从难以发现的不正常行为到非常严重的错误都可能发生。更糟糕的是这类问题的表现形式很可能是不确定。这取决于JVM查找JAR包的顺序。因此，问题的表现形式很可能因环境的不同而有差别。典型的例子就是开发者使用的IDE和生产环境的不同将可能让相同的代码产生不同的行为。</p></li>
+
+<li><p><strong>版本冲突</strong></p>
+
+<p>当两个必须的类库各自依赖于不同版本且不兼容的第三个类库时就会产生这个问题。</p>
+
+<p>如果某个类库的两个不同版本都存在于classpath中，那么应用程序的行为将变得无法预测。首先，由于存在屏蔽问题，两个版本中都存在的类只能从其中一个类库加载。更糟糕的是，如果应用程序访问了一个只存在某个版本类库的类，那么该类也会被加载。这就意味着调用该类库的程序会混合着使用这两个版本类库的代码。</p>
+
+<p>正由于应用程序需要访问同一类库的不同版本，因此当其中一个版本不存在的时候，应用程序极有可能无法正常工作。要么是程序行为不符合期望，要么就抛出NoClassDefFoundErrors异常。</p></li>
+
+<li><p><strong>复杂的类加载</strong></p>
+
+<p>默认情况下应用程序的所有的类都是由同一个类加载器(ClassLoader)进行加载，但是开发者也可以自由地添加额外的类加载器。</p>
+
+<p>这通常是由类似组件系统和网络服务器这类容器(Container)实现的。理想的情况下，这种隐式的使用(额外的类加载器)对开发者是透明的。但是，众所周知，所有的抽象都不是十全十美的。在某些特殊情况下，开发者可能要显式地使用额外的类加载器来实现一些功能。例如允许用户可以通过加载新的类来扩展程序的功能，或者让用户可以使用同一个依赖的相互冲突的版本。</p>
+
+<p>暂且不管该问题是如何造成的，使用多个类加载器会很快使得类加载机制变得异常复杂，从而导致难以预料且难以理解的行为。</p></li>
+</ol>
+
+<h3 id="maven-包管理"><strong>Maven 包管理</strong></h3>
+
+<h4 id="maven的约定-convention-over-configuration"><strong>Maven的约定（Convention over Configuration）</strong></h4>
+
+<p><strong>目录结构：</strong></p>
+
+<pre><code>    src                            源代码和测试代码的根目录
+
+        main                       应用代码的源目录
+
+            java                   源代码
+
+            resources              项目的资源文件
+
+        test                       测试代码的源目录
+
+            java                   测试代码
+
+            resources              测试的资源文件
+
+    target                         编译后的类文件、jar文件等
+
+</code></pre>
+
+<p><strong>POM.xml</strong></p>
+
+<ul>
+<li><strong>repositories</strong></li>
+</ul>
+
+<p>国内使用阿里云，速度较快,可以在setting.xml处修改</p>
+
+<pre><code class="language-xml">&lt;repositories&gt;
+        &lt;repository&gt;
+            &lt;id&gt;alimaven&lt;/id&gt;
+            &lt;name&gt;aliyun maven&lt;/name&gt;
+            &lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public/&lt;/url&gt;
+        &lt;/repository&gt;
+    &lt;/repositories&gt;
+</code></pre>
+
+<ul>
+<li><p><strong>dependency</strong></p>
+
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;
+    &lt;artifactId&gt;junit-jupiter-api&lt;/artifactId&gt;
+    &lt;version&gt;5.4.2&lt;/version&gt;//需要的包和类，载包maven网站获得
+    &lt;scope&gt;test&lt;/scope&gt;
+    //常见scope(compile、test、privide)，test只用在test相关代码才能看见，
+    //compile同理(main和test都可见)，provide使编译的时候使用，运行的时候不使用（Tomcat）
+&lt;/dependency&gt;
+</code></pre></li>
+</ul>
+
+<p><strong>优点：</strong> 按照约定为所有的包编号，方便检索。</p>
+
+<p><strong>中央仓库</strong></p>
+
+<ul>
+<li>通过中央仓下载jar包</li>
+</ul>
+
+<p><strong>本地仓库</strong></p>
+
+<ul>
+<li>默认位于~/.m2</li>
+<li>下载的第三包在这里进行缓存</li>
+</ul>
+
+<p><strong>语义化版本</strong></p>
+
+<p>版本格式：主版本号.次版本号.修订号，版本号递增规则如下：</p>
+
+<ol>
+<li>主版本号：当你做了不兼容的 API 修改，</li>
+<li>次版本号：当你做了向下兼容的功能性新增，</li>
+<li>修订号：当你做了向下兼容的问题修正。
+先行版本号及版本编译元数据可以加到“主版本号.次版本号.修订号”的后面，作为延伸。</li>
+</ol>
+
+<h4 id="snapshot快照版本"><strong>SNAPSHOT快照版本</strong></h4>
+
+<blockquote>
+<p><a href="https://ayayui.gitbooks.io/tutorialspoint-maven/content/book/maven_snapshots.html">Maven快照机制（SNAPSHOT）</a>————参考文档</p>
+</blockquote>
+
+<h4 id="maven的优点以及包冲突的解决方法"><strong>Maven的优点以及包冲突的解决方法</strong></h4>
+
+<blockquote>
+<p><a href="https://blog.csdn.net/RobertoHuang/article/details/81778181">Maven JAR包冲突问题排查及解决方案</a></p>
+</blockquote>
+
+<h5 id="优点"><strong>优点</strong></h5>
+
+<p>Maven解决了<strong>传递性依赖的自动管理</strong>，其遵循的原则是绝对不允许最终的classpath出现同名不同版本的jar包，</p>
+
+<h5 id="包冲突的解决方法"><strong>包冲突的解决方法</strong></h5>
+
+<p><strong>包冲突：</strong> 当两个同名的库出现在Classpath。就容易引起包冲突，在maven中会自动处理，但它选则它会选择靠前（在dependency树靠前的部分）的jar包。</p>
+
+<p><strong>包冲突的常见异常</strong></p>
+
+<ul>
+<li><strong>AbstractMethodError</strong></li>
+<li><strong>NoClassDefFoundError</strong></li>
+<li><strong>ClassNotFoundException</strong></li>
+<li><strong>LinkageError</strong></li>
+</ul>
+
+<p><strong>注意：</strong>当出现如上的异常报错时，说明很有可能出现了包冲突。</p>
+
+<p><strong>解决方法：</strong></p>
+
+<p>1、 <code>mvn denpedence:tree</code>查看依赖树</p>
+
+<p><strong>注意</strong>：其只展现了冲突解决后的依赖树，使用靠前（在dependency树靠前的部分）的jar包也可以使用<code>mvn dependency:tree -Dincludes=velocity:velocity</code>定向查看。</p>
+
+<p>2、</p>
+
+<ul>
+<li>在Maven中pom.xml 的 dependency 中直接引入jar包中的类，使其更加靠前。</li>
+
+<li><p>排除不想使用的jar包的传递性依赖（<code>&lt;exclusions&gt;</code>）</p>
+
+<pre><code class="language-xml">&lt;dependency&gt;
+    &lt;groupId&gt;org.junit.jupiter&lt;/groupId&gt;
+    &lt;artifactId&gt;junit-jupiter-api&lt;/artifactId&gt;
+    &lt;version&gt;5.4.2&lt;/version&gt;//需要的包和类，载包maven网站获得
+    &lt;scope&gt;test&lt;/scope&gt;
+    &lt;exclusions&gt;//排除不想使用的jar包
+        &lt;exclusion&gt;
+        &lt;groupId&gt;xxxxx&lt;/groupId&gt;
+        &lt;artifactId&gt;xxxx&lt;/artifactId&gt;
+        &lt;version&gt;xxxxx&lt;/version&gt;
+        &lt;/exculsion&gt;
+    &lt;/exclusions&gt;
+&lt;/dependency&gt;
+</code></pre></li>
+</ul>
+
+<h4 id="maven的安装与卸载"><strong>Maven的安装与卸载</strong></h4>
+
+<p>1.下载或上传安装包：</p>
+
+<p>　　<code>wget http://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.2/binaries/apache-maven-3.6.2-bin.tar.gz</code></p>
+
+<p>2、将安装包copy到指定目录(usr/local)并安装：</p>
+
+<p>　　<code>tar xzvf /srv/ftp/apache-maven-3.6.2-bin.tar.gz</code></p>
+
+<p>3、为了方便管理配置，进行重命名：</p>
+
+<p>　　<code>mv /usr/local/apache-maven-3.6.2/ /usr/local/maven</code></p>
+
+<p>4、打开配置文件，配置环境变量：</p>
+
+<pre><code>        vim /etc/profile
+        export JAVA_HOME=/usr/local/jdk
+　　	export MYSQL_HOME=/usr/local/mysql
+　　	export M2_HOME=/usr/local/maven
+　　	export PATH=$PATH:$JAVA_HOME/bin:$MYSQL_HOME/bin:$M2_HOME/bin:
+</code></pre>
+
+<pre><code class="language-使配置立即生效：">　　source /etc/profile
+</code></pre>
+
+<p>5、创建Maven本地仓库：</p>
+
+<p>　　<code>mkdir -p /usr/data/maven/local_repository</code></p>
+
+<p>6、打开Maven的settings.xml配置文件，配置相应的仓库路径以及国内仓库地址：</p>
+
+<p>　　<code>vim /usr/local/maven/conf/settings.xml</code></p>
+
+<pre><code>　　修改本地仓库路径：
+
+　　&lt;localRepository&gt;/usr/data/maven/local_repository&lt;/localRepository&gt;
+
+　　修改国内仓库地址：配置在&lt;mirrors&gt;中
+　　&lt;mirror&gt;
+　　　　&lt;id&gt;nexus-aliyun&lt;/id&gt;
+　　　　&lt;mirrorOf&gt;*&lt;/mirrorOf&gt;
+　　　　&lt;name&gt;Nexus aliyun&lt;/name&gt;
+　　　　&lt;url&gt;http://maven.aliyun.com/nexus/content/groups/public&lt;/url&gt;
+　　&lt;/mirror&gt;
+</code></pre>
+
+<p>7、 测试：在终端输入：mvn</p>
+
+<h4 id="maven的卸载"><strong>Maven的卸载</strong></h4>
+
+<ul>
+<li>Linux系统
+
+<code>sudo apt-get remove --purge maven</code>
+
+####</li>
+</ul>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="/./tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="/./tags/maven" role="button">Maven </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+                <a href=/././blog/2019-10/java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%85%A5%E9%97%A801/ class="post-meta">Previous
+                  <div class="pt-2 pb-5 d-flex">
+                    <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
+                    <span>Java多线程入门(01)</span>
+                  </div>
+                </a>
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#maven%e5%85%a5%e9%97%a8">
+												 Maven入门
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#java%e7%9a%84%e5%8c%85%e7%ae%a1%e7%90%86">
+												 Java的包管理
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%8c%85%e7%ae%a1%e7%90%86%e7%9a%84%e5%8e%86%e5%8f%b2">
+												 包管理的历史
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#jvm%e7%9a%84%e7%b1%bb%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f-%e7%b1%bb%e7%9a%84%e5%8a%a0%e8%bd%bd%e6%9c%ba%e5%88%b6">
+												 Jvm的类生命周期——类的加载机制
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%b1%bb%e7%9a%84%e8%b7%af%e5%be%84-classpath">
+												 类的路径（Classpath）
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#classpath-hell">
+												 Classpath hell
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#maven-%e5%8c%85%e7%ae%a1%e7%90%86">
+												 Maven 包管理
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#maven%e7%9a%84%e7%ba%a6%e5%ae%9a-convention-over-configuration">
+												 Maven的约定（Convention over Configuration）
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#snapshot%e5%bf%ab%e7%85%a7%e7%89%88%e6%9c%ac">
+												 SNAPSHOT快照版本
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#maven%e7%9a%84%e4%bc%98%e7%82%b9%e4%bb%a5%e5%8f%8a%e5%8c%85%e5%86%b2%e7%aa%81%e7%9a%84%e8%a7%a3%e5%86%b3%e6%96%b9%e6%b3%95">
+												 Maven的优点以及包冲突的解决方法
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#maven%e7%9a%84%e5%ae%89%e8%a3%85%e4%b8%8e%e5%8d%b8%e8%bd%bd">
+												 Maven的安装与卸载
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#maven%e7%9a%84%e5%8d%b8%e8%bd%bd">
+												 Maven的卸载
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="//github.com/903875816 " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+    
+      <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin-in mr-3" aria-hidden="true"></i></a>
+    
+
+    
+      <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+    <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus-g mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//instagram.com/you" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+    
+
+
+    
+        <a href="mailto:604150318@qq.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2019 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="/./js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/./js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="/./js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="/./js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="/./js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="/./js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="/./js/main.js"></script>
+
+
+
+  
+  <script src="/./js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="/./js/vendors/katex/katex.min.js"> </script>
+  <script src="/./js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>

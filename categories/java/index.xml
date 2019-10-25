@@ -6,17 +6,26 @@
     <description>Recent content in Java on OrangeC的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zn-Hans</language>
-    <lastBuildDate>Sun, 20 Oct 2019 23:46:11 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 25 Oct 2019 17:34:20 +0800</lastBuildDate>
     
 	<atom:link href="/./categories/java/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Java多线程入门</title>
-      <link>/./blog/2019-10/java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%85%A5%E9%97%A8/</link>
+      <title>Maven入门</title>
+      <link>/./blog/2019-10/maven%E5%85%A5%E9%97%A8/</link>
+      <pubDate>Fri, 25 Oct 2019 17:34:20 +0800</pubDate>
+      
+      <guid>/./blog/2019-10/maven%E5%85%A5%E9%97%A8/</guid>
+      <description>Java基础说明，Java开发环境、编译环境的介绍、执行原理等。</description>
+    </item>
+    
+    <item>
+      <title>Java多线程入门(01)</title>
+      <link>/./blog/2019-10/java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%85%A5%E9%97%A801/</link>
       <pubDate>Sun, 20 Oct 2019 23:46:11 +0800</pubDate>
       
-      <guid>/./blog/2019-10/java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%85%A5%E9%97%A8/</guid>
+      <guid>/./blog/2019-10/java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%85%A5%E9%97%A801/</guid>
       <description>线程与进程相似，但线程是一个比进程更小的执行单位。一个进程在其执行的过程中可以产生多个线程。与进程不同的是同类的多个线程共享同一块内存空间和一组系统资源，所以系统在产生一个线程，或是在各个线程之间作切换工作时，负担要比进程小得多，也正因为如此，线程也被称为轻量级进程。</description>
     </item>
     

@@ -1,0 +1,1291 @@
+<!DOCTYPE html>
+<html lang="zn-Hans">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1" />
+  <meta name="author" content="OrangeC">
+  <meta name="description" content="线程与进程相似，但线程是一个比进程更小的执行单位。一个进程在其执行的过程中可以产生多个线程。与进程不同的是同类的多个线程共享同一块内存空间和一组系统资源，所以系统在产生一个线程，或是在各个线程之间作切换工作时，负担要比进程小得多，也正因为如此，线程也被称为轻量级进程。">
+  
+  <meta property="og:title" content="Java多线程入门(01)" />
+<meta property="og:description" content="线程与进程相似，但线程是一个比进程更小的执行单位。一个进程在其执行的过程中可以产生多个线程。与进程不同的是同类的多个线程共享同一块内存空间和一组系统资源，所以系统在产生一个线程，或是在各个线程之间作切换工作时，负担要比进程小得多，也正因为如此，线程也被称为轻量级进程。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/./blog/2019-10/java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%85%A5%E9%97%A801/" />
+<meta property="article:published_time" content="2019-10-20T23:46:11+08:00" />
+<meta property="article:modified_time" content="2019-10-20T23:46:11+08:00" />
+
+
+
+  <title>
+  
+       Java多线程入门(01) | OrangeC的博客 
+  
+  </title>
+
+  <link rel="canonical" href="/././blog/2019-10/java%E5%A4%9A%E7%BA%BF%E7%A8%8B%E5%85%A5%E9%97%A801/">
+
+  
+  
+
+  
+  <link href="/./css/vendors-extensions/fontawesome/all.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Ubuntu+Mono:400,400i,700,700i|Raleway:300,400,500,600">
+  <link href="/./css/font.css" rel="stylesheet"> 
+    
+  
+  <link href="/./css/vendors/bootstrap4/bootstrap.min.css" rel="stylesheet">
+  <link href="/./css/vendors-extensions/mdb/mdb.min.css" rel="stylesheet"> 
+  <link href="/./css/vendors/mdb/style.min.css" rel="stylesheet"> 
+  <link href="/./css/main.css" rel="stylesheet">
+
+
+  
+  <link rel="shortcut icon"
+  
+      href="/./img/zheng.png"
+  
+  >
+
+
+  
+  
+
+  <style type="text/css">
+      @media (min-width: 800px) and (max-width: 850px) {
+              .navbar:not(.top-nav-collapse) {
+                  background: #1C2331!important;
+              }
+          }
+  </style>
+
+
+  
+    
+    <link rel="stylesheet" href="/./js/vendors/katex/katex.min.css">
+  
+  
+
+  
+    
+    <link rel="stylesheet" href="/./css/vendors/highlight/github-gist.css">
+  
+
+</head>
+
+  <body class="bg-light" data-spy="scroll" data-target="#page-scrollspy" data-offset="90">
+  
+    
+    
+
+    
+      
+
+
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+    <div class="container">
+
+      
+      <a class="navbar-brand" href="/././">
+          
+        <img class="avatar" src="/./img/zheng.png" style="width: 40px!important;height: auto;"  class="d-inline-block align-top" alt="" >
+        
+        <strong> OrangeC</strong>
+      </a>
+
+      
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        
+        <ul class="navbar-nav mr-auto ">
+          <li class="nav-item ">
+            <a class="nav-link" href="/././">Home</a>
+          </li>
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="/./blog/" >Blog  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="/./java/" >Java  </a>
+            </li>
+          
+             
+            <li class="nav-item ">
+              <a class="nav-link" href="/./build/" >Build  </a>
+            </li>
+          
+          
+        </ul>
+
+      </div>
+
+    </div>
+  </nav>
+  
+ 
+      
+ 
+
+
+
+
+
+
+<div id="site-header" class="carousel slide carousel-fade" data-ride="carousel" style="height: 18rem;" >  
+
+  
+  
+  
+
+  
+  <div class="carousel-inner" role="listbox">
+    
+      
+
+        
+        <div class="carousel-item active">
+          <div class="view" style="background-image: url('/img/header-slides/raw_1515691746.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+              
+              
+              
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+      
+
+        
+        <div class="carousel-item">
+          <div class="view" style="background-image: url('/img/header-slides//raw_1515847341.jpg'); background-repeat: no-repeat; background-size: cover;">
+
+            
+            <div class="mask rgba-black-light d-flex justify-content-center align-items-center">
+
+            
+
+            </div>
+            
+
+          </div>
+        </div>
+        
+      
+    
+
+  
+  </div>
+  
+
+  
+  <div class="carousel-content text-center white-text wow fadeIn">
+    <div class="row mx-0 headfont mt-3 pt-4">
+      
+      <div class="col-12 col-sm-5 align-middle">
+        <a href="/././">
+          
+            <img class="pull-right avatar avatar-md" src="/./img/profile.jpg" alt="" >
+          
+        </a>
+      </div>
+      
+      <div class="col-12 col-sm-7 text-left pl-2">
+        <a href="/././">
+          <h1 class="mb-2 h1" style="font-weight: 300;" >
+            <strong>OrangeC的博客</strong>
+          </h1>
+        </a>
+        
+
+             
+        <div class="mt-2" style="font-size: 1rem; color: white;">
+            
+              <a href="//github.com/903875816" target="_blank" rel="noopener"><i class="fab fa-github pr-1" aria-hidden="true"></i></a>    
+            
+            
+              <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin pr-1" aria-hidden="true"></i></a>
+            
+
+            
+              <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook pr-1" aria-hidden="true"></i></a>
+            
+
+            
+            <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter pr-1" aria-hidden="true"></i></a>
+            
+
+            
+                <a href="//instagram.com/you" target="_blank" rel="noopener"><i class="fab fa-instagram pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+                <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px pr-1" aria-hidden="true"></i></a>
+            
+    
+        
+            
+                <a href="mailto:604150318@qq.com"><i class="far fa-envelope-open pr-1" aria-hidden="true"></i></a>
+            
+    
+            
+
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  
+  
+  
+
+</div>
+  
+    
+
+    
+  
+  <main class="post-main-wrapper">
+    
+    
+    <div class="row">
+
+      
+
+      
+      <div class="col-md-10">
+      
+
+        
+        <div class="z-depth-1  post-wrapper white-bg single-post">
+
+          <div class="post-header text-center" >
+  <ul class="post-meta li-x">
+    
+      
+        <li><a href="/./categories/java"><i class="fas fa-folder-open pr-1" aria-hidden="true"></i> Java </a></li>
+      
+    
+    
+      
+        <li><a href="/./series/java%E5%AD%A6%E4%B9%A0"><i class="fas fa-bookmark pr-1" aria-hidden="true"></i>JAVA学习</a></li>
+      
+    
+  </ul>
+
+  <div class="px-4 post-heading">Java多线程入门(01)</div>
+
+  <ul class="post-meta li-x mt-1">
+    
+      <li>Sep 110, 20109</li>
+    
+
+    
+  </ul>
+  
+
+</div>
+
+
+          <div class="post-content markdown">
+            
+
+<h1 id="java-多线程入门-01">Java 多线程入门(01)</h1>
+
+<h2 id="一-进程和线程">一、进程和线程</h2>
+
+<h3 id="1-1-进程和线程">1.1 进程和线程</h3>
+
+<blockquote>
+<p><a href="https://juejin.im/post/5ab116875188255561411b8a">参考资料————Java多线程学习</a></p>
+</blockquote>
+
+<h4 id="1-1-1-进程-process">1.1.1 进程(Process)</h4>
+
+<p>进程是程序的一次执行过程，用户下达运行程序的命令后，就会产生进程，其是系统运行程序的基本单位，因此进程是动态的。进程需要一些资源才能完成工作，如CPU使用时间、存储器、文件以及I/O设备，且为依序逐一进行，也就是每个CPU核心任何时间内<strong>仅能运行一项进程</strong></p>
+
+<h4 id="1-1-2-线程">1.1.2 线程</h4>
+
+<p>线程是进程划分成的更小的运行单位。</p>
+
+<h5 id="线程的生命周期">线程的生命周期</h5>
+
+<p><img src="https://i.loli.net/2019/10/21/tYlnokEgVj5HKqW.jpg" alt="232002051747387.jpg" /></p>
+
+<ul>
+<li><p><strong>线程的五种状态</strong></p>
+
+<ul>
+<li><strong>新建状态（New）</strong>：当线程对象对创建后，即进入了新建状态，如：Thread t = new MyThread();</li>
+<li><strong>就绪状态（Runnable）</strong>：当调用线程对象的start()方法（t.start();），线程即进入就绪状态。处于就绪状态的线程，只是说明此线程已经做好了准备，随时等待CPU调度执行，并不是说执行了t.start()此线程立即就会执行；</li>
+<li><strong>运行状态（Running）</strong>：当CPU开始调度处于就绪状态的线程时，此时线程才得以真正执行，即进入到运行状态。注：就     绪状态是进入到运行状态的唯一入口，也就是说，线程要想进入运行状态执行，首先必须处于就绪状态中；</li>
+
+<li><p><strong>阻塞状态（Blocked）</strong>：处于运行状态中的线程由于某种原因，暂时放弃对CPU的使用权，停止执行，此时进入阻塞状态，直到其进入到就绪状态，才 有机会再次被CPU调用以进入到运行状态。根据阻塞产生的原因不同，阻塞状态又可以分为三种：</p>
+
+<pre><code>1.等待阻塞：运行状态中的线程执行wait()方法，使本线程进入到等待阻塞状态；
+
+2.同步阻塞 -- 线程在获取synchronized同步锁失败(因为锁被其它线程所占用)，它会进入同步阻塞状态；
+
+3.其他阻塞 -- 通过调用线程的sleep()或join()或发出了I/O请求时，线程会进入到阻塞状态。当sleep()状态超时、join()等待线程终止或者超时、或者I/O处理完毕时，线程重新转入就绪状态。
+</code></pre></li>
+
+<li><p><strong>死亡状态（Dead）</strong>：线程执行完了或者因异常退出了run()方法，该线程结束生命周期。</p></li>
+</ul></li>
+</ul>
+
+<h4 id="1-1-3-多线程">1.1.3 多线程</h4>
+
+<p><img src="https://i.loli.net/2019/10/20/XFG5jvdQVi18WKx.png" alt="1571565868(1).png" /></p>
+
+<p><strong>多线程的作用</strong>：在计算机中，CPU、内存、机械硬盘等的之间的读取处理速度都是有较大差别（数量级的），使用多线程可以有效的改善执行单任务时，任务等待阻塞的情况，使得计算机几乎同时执行多个线程，不必等待另一个程序。</p>
+
+<p><strong>（一个处理器在某一个时间点上永远都只能是一个线程！即使这个处理器是多核的，除非有多个处理器才能实现多个线程同时运行。）</strong>。</p>
+
+<p><strong>多线程的特点</strong>：多线程是一种 <strong>异步操作</strong>，也就意味着并会不会按照代码中的顺序来执行。
+使用多线程可以把占据长时间的程序中的任务放到<strong>后台去处理</strong></p>
+
+<p><strong>多线程的常用应用领域</strong>：</p>
+
+<ul>
+<li>常见的浏览器、Web服务（主线程专门用来监听请求，子线程专门用来处理请求，可以获得大的吞吐量）</li>
+<li>servlet多线程</li>
+<li>FTP下载，多线程操作文件等（文件IO的处理）</li>
+<li>数据库用到的多线程</li>
+<li>分布式计算</li>
+<li>后台任务：如定时向大量(100W以上)的用户发送邮件；定期更新配置文件、任务调度(如quartz)，一些监控用于定期信息采集</li>
+<li>自动作业处理：比如定期备份日志、定期备份数据库</li>
+<li>异步处理：如发微博、记录日志</li>
+<li>页面异步处理：比如大批量数据的核对工作(有10万个手机号码，核对哪些是已有用户)</li>
+</ul>
+
+<h3 id="1-2-进程和线程的异同">1.2 进程和线程的异同</h3>
+
+<p>线程和进程最大的不同在于基本上各进程是独立的，而各线程则不一定，因为同一进程中的线程极有可能会相互影响。从另一角度来说，进程属于操作系统的范畴，主要是同一段时间内，可以同时执行一个以上的程序，而线程则是在同一程序内几乎同时执行一个以上的程序段。
+进程是计算机管理运行程序的一种方式，一个进程下可包含一个或者多个线程。<strong>线程可以理解为子进程</strong>。</p>
+
+<hr />
+
+<h2 id="二-java-lang-thread的使用-多线程的实现">二、Java.lang.thread的使用(多线程的实现)</h2>
+
+<h3 id="1-线程的启动">1. 线程的启动</h3>
+
+<h4 id="线程的启动以及随机性">线程的启动以及随机性</h4>
+
+<pre><code class="language-java">package com.mythread.www;
+
+public class Mythread extends Thread{
+    @Override
+    public void run(){
+        try {
+            for (int i=1;i&lt;10;i++){
+                int time = (int) (Math.random()*1000);
+                Thread.sleep(time);
+                System.out.println(&quot;Run=&quot;+Thread.currentThread().getName());
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre>
+
+<pre><code class="language-java">package test;
+
+
+import com.mythread.www.Mythread;
+
+public class Run {
+    public static void main(String[] args) {
+        try{
+            Mythread mythread=new Mythread();
+            mythread.setName(&quot;myThread&quot;);
+            mythread.start();
+            for (int i =0;i&lt;10;i++){
+                int time =(int)(Math.random()*1000);
+                Thread.sleep(time);
+                System.out.println(&quot;Run=&quot;+Thread.currentThread().getName());
+            }
+        }catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+    }
+}
+</code></pre>
+
+<p>输出结果</p>
+
+<pre><code class="language-console">Run=myThread
+Run=main
+Run=main
+Run=main
+Run=main
+Run=myThread
+Run=main
+线程是一个子任务，每一个start方法使用之后，那个线程都会停在那里等待cpu的启动，而启动哪个是不确定的，因此着会导致CPU以不确定的方式，或者说是以随机的时间来调用线程中的run方法。
+</code></pre>
+
+<p>==线程的不确定性==：线程是一个子任务，每一个start方法使用之后，那个线程都会停在那里等待cpu的启动，而启动哪个是不确定的，因此着会导致CPU以不确定的方式，或者说是以随机的时间来调用线程中的run方法。解决方法，可以使用Cpu优先级的方法来指定。</p>
+
+<h4 id="实例变量和线程安全">- 实例变量和线程安全</h4>
+
+<pre><code class="language-java">package com.mythread.www;
+
+public class Mythread extends Thread{
+    private int i=5;
+    @Override
+    public void run(){
+        super.run();
+        i++;
+        System.out.println(this.currentThread().getName()+&quot;计算i=&quot;+i);
+    }
+}
+</code></pre>
+
+<pre><code class="language-java">package test;
+
+
+import com.mythread.www.Mythread;
+import myrunnable.MyRunnable;
+
+public class Run {
+    public static void main(String[] args) {
+        Mythread mythread=new Mythread();
+        Thread a=new Thread(mythread,&quot;A&quot;);
+        Thread b=new Thread(mythread,&quot;B&quot;);
+        Thread c=new Thread(mythread,&quot;C&quot;);
+        Thread d=new Thread(mythread,&quot;D&quot;);
+        Thread e=new Thread(mythread,&quot;E&quot;);
+        a.start();
+        b.start();
+        c.start();
+        d.start();
+        e.start();
+    }
+}
+</code></pre>
+
+<pre><code class="language-console">B计算i=8
+E计算i=10
+D计算i=9
+C计算i=8
+A计算i=8
+````
+- 共享变量数据会导致多个线程访问同一个变量，这导致线程的结果出错，原因变量(i++)需要3步：
+    * 取得原有的i值
+    * 进行 i+1
+    * 对i进行赋值
+- 解决方法：在Run方法前加入==Synchronize==关键字，使得多线程之间进行同步，按顺序排队。==Synchronize==会使得Run方法上锁，当一个线程调用run时，会判断run是否是上锁，若果上锁就需要等待其他线程调用完成之后才能调用。
+
+##### 涉及的Thread启动的方法
+
+1. **`start方法`**
+    &lt;/br&gt;通知线程规划器此线程准备开始，等待调用Run方法。(Causes this thread to begin execution,the Java Virtual Machine
+calls the &lt;code&gt;run&lt;/code&gt; method of this thread.)
+
+2. **`Run方法`**
+    &lt;/br&gt;线程开始运行，直接使用此方法会导致程序不是异步执行而是同步执行，需要等run()方法中的代码在执行完成之后才可以执行后面的代码
+
+### 2. 线程的暂停
+
+线程的暂停意味着还可以恢复运行，在java多线程中，可以~~使用suspend()方法~~暂停线程，使用~~resume方法~~恢复线程，由于会发生==死锁情况==和suspend和resume方法==不同步==现象，所以不推荐使用
+
+
+### 3. 线程停止
+
+#### JAVA中线程终止的方法
+
+- 线程在Run方法完成后线程自动终止
+- 使用Stop强行终止
+- 使用interrupt方法中断线程
+
+![线程停止的方法](https://user-gold-cdn.xitu.io/2018/3/21/162465aafdf3d0f4?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
+
+1. **`Thread.stop方法`**
+    &lt;/br&gt;**不安全,不推荐使用**
+2. **`Thread.interrupt方法`**
+    &lt;/br&gt;推荐的中断线程的用法
+3. **`this.interrupted方法`**
+    &lt;/br&gt;boolean方法，测试当前线程是否中断，该方法是==Static==的
+
+
+</code></pre>
+
+<p>java
+package test;</p>
+
+<p>public class Run2 {
+    public static void main(String[] args) {
+        Thread.currentThread().interrupt();
+        System.out.println(&ldquo;是否停止1=&rdquo;+Thread.interrupted());
+        System.out.println(&ldquo;是否停止1=&rdquo;+Thread.interrupted());
+    }
+}</p>
+
+<pre><code>输出结果
+</code></pre>
+
+<p>console
+是否停止1=true
+是否停止1=false</p>
+
+<pre><code>
+对于==interrupted==测试线程是否中断的方法
+线程的中断的状态由该方法清除，也就是连续两次调用该方法，第二次回返回false。
+执行后具有将状态标志清除为false的功能。
+
+4. **`this.isInterrupted方法`**
+    &lt;/br&gt;boolean方法，测试线程是否中断，该方法不是Static
+
+==一般的具体实现==：
+
+</code></pre>
+
+<p>java
+package com.mythread.www;</p>
+
+<p>public class Mythread extends Thread{
+    private int i=5;
+    @Override
+    public void run(){
+        super.run();
+        for (int i=0;i&lt;1000000;i++){
+            if (this.interrupted()){
+                System.out.println(&ldquo;已经是停止状态&rdquo;);
+                break;
+            }
+            System.out.println(&ldquo;i=&rdquo;+(i+1));
+        }
+    }
+}</p>
+
+<pre><code></code></pre>
+
+<p>java
+public class Run {
+    public static void main(String[] args) {
+        try{
+            Mythread mythread =new Mythread();
+            mythread.start();
+            Thread.sleep(1000);
+            mythread.interrupt();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println(&ldquo;end!&rdquo;);
+    }
+}</p>
+
+<pre><code></code></pre>
+
+<p>console
+i=195418
+i=195419
+i=195420
+i=195421
+i=195422
+i=195423
+i=195424
+i=195425
+i=195426
+i=195427
+i=195428
+end!
+已经是停止状态</p>
+
+<pre><code>
+**注意**:当For循环下还有语句线程将不会停止。可以在if中将break变成`throw new InterruptedException e`来处理语句继续输出的问题。
+
+==推荐的停止进程用法==
+
+&gt; 使用return加Interrupte实现线程的停止
+
+</code></pre>
+
+<p>java
+public class MyThread extends Thread {</p>
+
+<pre><code>@Override
+public void run() {
+        while (true) {
+            if (this.isInterrupted()) {
+                System.out.println(&quot;ֹͣ停止了!&quot;);
+                return;
+            }
+            System.out.println(&quot;timer=&quot; + System.currentTimeMillis());
+        }
+}
+</code></pre>
+
+<p>}。</p>
+
+<pre><code></code></pre>
+
+<p>java
+public class Run {</p>
+
+<pre><code>public static void main(String[] args) throws InterruptedException {
+    MyThread t=new MyThread();
+    t.start();
+    Thread.sleep(2000);
+    t.interrupt();
+}
+</code></pre>
+
+<p>}</p>
+
+<pre><code>
+#### 常见问题
+&gt; 在睡眠Sleep()中被停止某一线程，会进入catch语句，并且清除停止状态值，变成False，相反，先停止在Sleep也会进入Catch
+
+
+
+
+### 4. 线程的优先级
+
+#### 使用setPriority()方法设置线程优先级
+
+</code></pre>
+
+<p>java
+源代码
+public final void setPriority(int newPriority) {
+        ThreadGroup g;
+        checkAccess();
+        if (newPriority &gt; MAX_PRIORITY || newPriority &lt; MIN_PRIORITY) {
+            throw new IllegalArgumentException();
+        }
+        if((g = getThreadGroup()) != null) {
+            if (newPriority &gt; g.getMaxPriority()) {
+                newPriority = g.getMaxPriority();
+            }
+            setPriority0(priority = newPriority);
+        }
+    }</p>
+
+<pre><code>
+**注意**
+
+&gt; setPriority()只能取1-10之间的数，defaultqe为5，如果小于1或者大于10，jdk会抛出异常`IllegalArgumentException()`,当两个线程的优先级相差的==较大==时，会导致优先级大会被==优先调用执行==，但是==优先级高==的并不是每一次都先被执行完，但优先级相差较小，他们就会有一定随机性。
+
+#### 线程优先级的继承性
+
+&gt; 线程的优先级具有继承性，例如A线程启动B线程，则B线程的优先级与A是一样的
+
+
+
+
+### 5. Thread的常用方法
+
+1. **`currentThread方法`**
+    &lt;/br&gt;可以返回代码正在被哪个线程调用
+2. **`isAlive方法`**
+    &lt;/br&gt;判断当前线程是否活跃(A thread is alive if it has
+     been started and has not yet died)
+3. **`sleep()方法`**
+    &lt;/br&gt;让当前正在执行的线程休眠（暂停执行，this.currentThread）
+3. **`getId方法`**
+    &lt;/br&gt;取得线程的唯一标识。
+
+---
+
+## 三、Java.lang.Runnable接口的使用(多线程的实现)
+&gt; 欲创建的线程已经有继承父类时想创建进程需实现Runnable接口
+
+![1571573846(1).png](https://i.loli.net/2019/10/20/UlQLzTj67BFp2SX.png)
+### 使用Runnable接口创建一个进程
+Thread可以接收有实现Runnable的类
+</code></pre>
+
+<p>java
+package myrunnable;</p>
+
+<p>public class MyRunnable implements Runnable{
+    @Override
+    public void run() {
+        System.out.println(&ldquo;运行中&rdquo;);
+    }
+}</p>
+
+<pre><code></code></pre>
+
+<p>java
+import myrunnable.MyRunnable;</p>
+
+<p>public class Run {
+    public static void main(String[] args) {
+        Runnable runnable=new MyRunnable();
+        Thread thread=new Thread(runnable);
+        thread.start();
+        System.out.println(&ldquo;运行结束&rdquo;);
+    }
+}
+```</p>
+
+          </div>
+
+          
+          <div class="row">
+            <div class="col-md-8">
+            
+              <div class="mb-5">
+                
+<div class="li-x div-x post-meta">
+  <li class="pr-0"><a href="/./tags/"><i class="fas fa-tags"></i></a></li>
+  <div class="tags-sm">
+    
+      <li><a href="/./tags/%E5%A4%9A%E7%BA%BF%E7%A8%8B" role="button">多线程 </a></li>
+      
+    
+  </div>
+</div>
+              </div>
+            
+            </div>
+            
+          </div>
+          
+
+          
+          <div class="row pt-3">
+            <div class="col-md-6">
+              
+                <a href=/././blog/2019-10/java%E5%B8%B8%E7%94%A8%E7%B1%BB/ class="post-meta">Previous
+                  <div class="pt-2 pb-5 d-flex">
+                    <i class="fas fa-angle-left text-grey font-weight-bold mr-2 active-color"></i>
+                    <span>Java常用类</span>
+                  </div>
+                </a>
+              
+            </div>
+            
+            <div class="col-md-6 text-right" >
+              
+                <a href=/././blog/2019-10/maven%E5%85%A5%E9%97%A8/ class="post-meta">Next
+                  <div class="pt-2 pb-5 flex-reverse">
+                    <i class="fas fa-angle-right text-grey font-weight-bold ml-2 active-color"></i>
+                    <span>Maven入门</span>
+                  </div>
+                </a>
+              
+            </div>
+          </div>
+
+          
+
+        </div>
+        
+
+      </div>
+      
+
+      
+	
+	
+	
+	
+		
+		
+		
+	
+
+		
+		<div class="col-md-2 pl-0">
+
+			
+			<div id="page-scrollspy" class="toc-nav">
+				
+				<ul class="nav nav-pills ml-0">
+					
+					<li class="nav-item pb-3 text-center">
+						<span class="font-weight-bold mb-2">- CATALOG - </span>
+					</li>
+
+					
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#java-%e5%a4%9a%e7%ba%bf%e7%a8%8b%e5%85%a5%e9%97%a8-01">
+												 Java 多线程入门(01)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%b8%80-%e8%bf%9b%e7%a8%8b%e5%92%8c%e7%ba%bf%e7%a8%8b">
+												 一、进程和线程
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#1-1-%e8%bf%9b%e7%a8%8b%e5%92%8c%e7%ba%bf%e7%a8%8b">
+												 1.1 进程和线程
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#1-1-1-%e8%bf%9b%e7%a8%8b-process">
+												 1.1.1 进程(Process)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#1-1-2-%e7%ba%bf%e7%a8%8b">
+												 1.1.2 线程
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#1-1-3-%e5%a4%9a%e7%ba%bf%e7%a8%8b">
+												 1.1.3 多线程
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#1-2-%e8%bf%9b%e7%a8%8b%e5%92%8c%e7%ba%bf%e7%a8%8b%e7%9a%84%e5%bc%82%e5%90%8c">
+												 1.2 进程和线程的异同
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e4%ba%8c-java-lang-thread%e7%9a%84%e4%bd%bf%e7%94%a8-%e5%a4%9a%e7%ba%bf%e7%a8%8b%e7%9a%84%e5%ae%9e%e7%8e%b0">
+												 二、Java.lang.thread的使用(多线程的实现)
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#1-%e7%ba%bf%e7%a8%8b%e7%9a%84%e5%90%af%e5%8a%a8">
+												 1. 线程的启动
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e7%ba%bf%e7%a8%8b%e7%9a%84%e5%90%af%e5%8a%a8%e4%bb%a5%e5%8f%8a%e9%9a%8f%e6%9c%ba%e6%80%a7">
+												 线程的启动以及随机性
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+						
+						
+							
+								
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+									<ul class="nav">
+								
+								
+
+										<li class="nav-item">
+						 					<a class="nav-link" href="#%e5%ae%9e%e4%be%8b%e5%8f%98%e9%87%8f%e5%92%8c%e7%ba%bf%e7%a8%8b%e5%ae%89%e5%85%a8">
+												 - 实例变量和线程安全
+											</a>
+										</li>
+						 
+								
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+									</ul>
+								
+							
+						
+				 
+
+				</ul>
+			</div>
+			
+
+		</div>
+		
+	
+
+    </div>
+    
+
+
+  </main>
+  
+
+
+    
+    
+
+<footer class="page-footer text-center font-small mt-4 wow fadeIn">
+
+
+  
+  <div class="pb-2 mt-5 pt-5">
+    
+      <a href="//github.com/903875816 " target="_blank" rel="noopener"><i class="fab fa-github mr-3" aria-hidden="true"></i></a>    
+    
+    
+      <a href="//linkedin.com/in/you" target="_blank" rel="noopener"><i class="fab fa-linkedin-in mr-3" aria-hidden="true"></i></a>
+    
+
+    
+      <a href="//facebook.com/you" target="_blank" rel="noopener"><i class="fab fa-facebook-f mr-3" aria-hidden="true"></i></a>
+    
+
+    
+    <a href="//google.com/you" target="_blank" rel="noopener"><i class="fab fa-google-plus-g mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//twitter.com/you" target="_blank" rel="noopener"><i class="fab fa-twitter mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//instagram.com/you" target="_blank" rel="noopener"><i class="fab fa-instagram mr-3" aria-hidden="true"></i></a>
+    
+
+    
+        <a href="//px500" target="_blank" rel="noopener"><i class="fab fa-500px mr-3" aria-hidden="true"></i></a>
+    
+
+
+    
+        <a href="mailto:604150318@qq.com"><i class="far fa-envelope-open mr-3" aria-hidden="true"></i></a>
+    
+
+    
+
+    
+
+  </div>
+  
+
+  
+  <div class="copyright py-4">
+    
+    <span>  2016 - 2019 &copy; | Theme <a href='https://github.com/orianna-zzo/AllinOne' target="_blank">AllinOne</a> by <a href='https://github.com/orianna-zzo' target="_blank">Orianna</a>  </span>
+  </div>
+  
+
+</footer>
+
+
+    
+
+
+
+
+
+
+<script type="text/javascript" src="/./js/vendors/jquery/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="/./js/vendors/jquery/jquery.smooth-scroll.min.js"></script>
+
+
+
+<script type="text/javascript" src="/./js/vendors/popper.min.js"></script>
+<script type="text/javascript" src="/./js/vendors/holder.min.js"></script>
+<script type="text/javascript" src="/./js/vendors-extensions/bootstrap4/bootstrap.js" ></script>
+
+<script type="text/javascript" src="/./js/vendors/mdb/mdb.min.js"></script>
+
+<script type="text/javascript" src="/./js/main.js"></script>
+
+
+
+  
+  <script src="/./js/vendors/highlight.pack.js"> </script>
+  <script>hljs.initHighlightingOnLoad();</script>
+
+
+
+
+ 
+  <script src="/./js/vendors/katex/katex.min.js"> </script>
+  <script src="/./js/vendors/katex/contrib/auto-render.min.js"></script>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          renderMathInElement(document.body);
+      });
+  </script>
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+  
+  new WOW().init();
+</script>
+
+
+
+
+  </body>
+</html>
